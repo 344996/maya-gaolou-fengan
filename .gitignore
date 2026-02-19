@@ -8,6 +8,6 @@ node_modules
 直播图片/
 deploy/
 deploy-lite/
-# 排除超大视频（手动指定）
+# 排除超大视频
 video/123.mp4
-video/粉干制作视频/
+*.docx
