@@ -8,6 +8,6 @@ node_modules
 直播图片/
 deploy/
 deploy-lite/
-*.mp4
-*.mov
-*.avi
+# 排除超大视频（手动指定）
+video/123.mp4
+video/粉干制作视频/
