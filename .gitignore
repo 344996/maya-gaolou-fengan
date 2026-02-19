@@ -8,6 +8,7 @@ node_modules
 video/
 直播图片/
 商品/
+deploy/
 *.mp4
 *.mov
 *.avi
