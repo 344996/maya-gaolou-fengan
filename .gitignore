@@ -5,10 +5,9 @@ node_modules
 
 # 排除大文件用于部署
 视频/
-video/
 直播图片/
-商品/
 deploy/
+deploy-lite/
 *.mp4
 *.mov
 *.avi
