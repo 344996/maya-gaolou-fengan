@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>淘宝成交数据看板</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body class="mobile-body">
+    <!-- 顶部导航栏 -->
+    <header class="mobile-header taobao-header">
+        <div class="header-left">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header-center">
+            <h1 class="header-title">淘宝成交数据</h1>
+        </div>
+        <div class="header-right">
+            <button class="refresh-btn" onclick="refreshData()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M23 4V10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 20V14H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.51 9C4.01717 7.56678 4.87913 6.28541 6.01547 5.27542C7.1518 4.26543 8.52547 3.55976 10.0083 3.22426C11.4911 2.88875 13.0348 2.93434 14.4952 3.35677C15.9556 3.77921 17.2853 4.56471 18.36 5.64L23 10M1 14L5.64 18.36C6.71475 19.4353 8.04437 20.2208 9.50481 20.6432C10.9652 21.0657 12.5089 21.1113 13.9917 20.7757C15.4745 20.4402 16.8482 19.7346 17.9845 18.7246C19.1209 17.7146 19.9828 16.4332 20.49 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="main-content taobao-dashboard">
+        <!-- 授权状态提示 -->
+        <div class="auth-status success" id="authStatus">
+            <span class="auth-icon">✓</span>
+            <span class="auth-text">淘宝授权已连接</span>
+            <span class="auth-time">最后同步: 5分钟前</span>
+        </div>
+
+        <!-- 日期筛选 -->
+        <section class="date-filter">
+            <div class="date-tabs">
+                <button class="date-tab active" data-range="today">今日</button>
+                <button class="date-tab" data-range="yesterday">昨日</button>
+                <button class="date-tab" data-range="week">近7天</button>
+                <button class="date-tab" data-range="month">近30天</button>
+                <button class="date-tab" data-range="custom">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 2V6M8 2V6M3 10H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    自定义
+                </button>
+            </div>
+        </section>
+
+        <!-- 核心指标卡片 -->
+        <section class="core-metrics">
+            <div class="section-header">
+                <h3 class="section-title">📊 核心成交指标</h3>
+                <span class="data-delay">数据延迟: T+0 (实时)</span>
+            </div>
+            
+            <div class="metrics-highlight-grid">
+                <!-- 成交订单数 -->
+                <div class="metric-highlight-card">
+                    <div class="metric-icon order">📦</div>
+                    <div class="metric-content">
+                        <div class="metric-value-lg">1,256</div>
+                        <div class="metric-label">成交订单数</div>
+                        <div class="metric-compare">
+                            <span class="compare-trend up">↑ 15.3%</span>
+                            <span class="compare-text">较昨日</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成交金额 -->
+                <div class="metric-highlight-card primary">
+                    <div class="metric-icon amount">💰</div>
+                    <div class="metric-content">
+                        <div class="metric-value-lg">¥328,560</div>
+                        <div class="metric-label">成交金额</div>
+                        <div class="metric-compare">
+                            <span class="compare-trend up">↑ 22.8%</span>
+                            <span class="compare-text">较昨日</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 客单价 -->
+                <div class="metric-highlight-card">
+                    <div class="metric-icon price">🏷️</div>
+                    <div class="metric-content">
+                        <div class="metric-value-lg">¥261.5</div>
+                        <div class="metric-label">客单价</div>
+                        <div class="metric-compare">
+                            <span class="compare-trend up">↑ 6.5%</span>
+                            <span class="compare-text">较昨日</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 整体ROI -->
+                <div class="metric-highlight-card success">
+                    <div class="metric-icon roi">📈</div>
+                    <div class="metric-content">
+                        <div class="metric-value-lg">3.8</div>
+                        <div class="metric-label">整体ROI</div>
+                        <div class="metric-compare">
+                            <span class="compare-trend up">↑ 0.5</span>
+                            <span class="compare-text">较昨日</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 转化指标 -->
+        <section class="conversion-metrics">
+            <div class="section-header">
+                <h3 class="section-title">🔄 转化指标</h3>
+            </div>
+            
+            <div class="conversion-funnel">
+                <div class="funnel-item">
+                    <div class="funnel-bar" style="width: 100%;">
+                        <span class="funnel-value">58,230</span>
+                    </div>
+                    <span class="funnel-label">商品曝光</span>
+                </div>
+                <div class="funnel-arrow">↓</div>
+                <div class="funnel-item">
+                    <div class="funnel-bar" style="width: 45%;">
+                        <span class="funnel-value">26,203</span>
+                    </div>
+                    <span class="funnel-label">商品点击</span>
+                    <span class="funnel-rate">点击率 45.0%</span>
+                </div>
+                <div class="funnel-arrow">↓</div>
+                <div class="funnel-item">
+                    <div class="funnel-bar" style="width: 18%;">
+                        <span class="funnel-value">4,716</span>
+                    </div>
+                    <span class="funnel-label">加购人数</span>
+                    <span class="funnel-rate">加购率 18.0%</span>
+                </div>
+                <div class="funnel-arrow">↓</div>
+                <div class="funnel-item">
+                    <div class="funnel-bar" style="width: 8%;">
+                        <span class="funnel-value">1,256</span>
+                    </div>
+                    <span class="funnel-label">成交订单</span>
+                    <span class="funnel-rate">转化率 4.8%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 详细数据表格 -->
+        <section class="detail-metrics">
+            <div class="section-header">
+                <h3 class="section-title">📋 详细指标</h3>
+            </div>
+            
+            <div class="metrics-table">
+                <div class="table-row">
+                    <span class="table-label">商品点击率</span>
+                    <span class="table-value">45.0%</span>
+                    <span class="table-trend up">↑ 3.2%</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label">加购人数</span>
+                    <span class="table-value">4,716</span>
+                    <span class="table-trend up">↑ 12.5%</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label">加购转化率</span>
+                    <span class="table-value">26.6%</span>
+                    <span class="table-trend up">↑ 2.1%</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label">退货率</span>
+                    <span class="table-value">3.2%</span>
+                    <span class="table-trend down">↓ 0.8%</span>
+                </div>
+                <div class="table-row">
+                    <span class="table-label">退款金额</span>
+                    <span class="table-value">¥10,513</span>
+                    <span class="table-trend down">↓ 15.3%</span>
+                </div>
+                <div class="table-row highlight">
+                    <span class="table-label">净成交金额</span>
+                    <span class="table-value">¥318,047</span>
+                    <span class="table-trend up">↑ 24.1%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热销商品排行 -->
+        <section class="hot-products">
+            <div class="section-header">
+                <h3 class="section-title">🔥 热销商品排行</h3>
+                <a href="#" class="see-more">查看全部 ></a>
+            </div>
+            
+            <div class="product-ranking-list">
+                <div class="product-ranking-item" onclick="viewProductDetail('prod001')">
+                    <span class="product-rank gold">1</span>
+                    <img src="https://via.placeholder.com/60/FF6B6B/fff?text=1" alt="商品" class="product-thumb">
+                    <div class="product-info">
+                        <p class="product-name">年货礼盒大礼包 春节坚果零食组合装</p>
+                        <div class="product-stats">
+                            <span>成交 386单</span>
+                            <span>¥38,214</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-ranking-item" onclick="viewProductDetail('prod002')">
+                    <span class="product-rank silver">2</span>
+                    <img src="https://via.placeholder.com/60/4ECDC4/fff?text=2" alt="商品" class="product-thumb">
+                    <div class="product-info">
+                        <p class="product-name">美白精华液30ml 烟酰胺提亮肤色</p>
+                        <div class="product-stats">
+                            <span>成交 285单</span>
+                            <span>¥56,715</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-ranking-item" onclick="viewProductDetail('prod003')">
+                    <span class="product-rank bronze">3</span>
+                    <img src="https://via.placeholder.com/60/9B59B6/fff?text=3" alt="商品" class="product-thumb">
+                    <div class="product-info">
+                        <p class="product-name">无线蓝牙耳机 降噪入耳式运动耳机</p>
+                        <div class="product-stats">
+                            <span>成交 198单</span>
+                            <span>¥31,482</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-ranking-item" onclick="viewProductDetail('prod004')">
+                    <span class="product-rank">4</span>
+                    <img src="https://via.placeholder.com/60/F39C12/fff?text=4" alt="商品" class="product-thumb">
+                    <div class="product-info">
+                        <p class="product-name">网红零食大礼包 休闲小吃组合</p>
+                        <div class="product-stats">
+                            <span>成交 165单</span>
+                            <span>¥9,735</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-ranking-item" onclick="viewProductDetail('prod005')">
+                    <span class="product-rank">5</span>
+                    <img src="https://via.placeholder.com/60/3498DB/fff?text=5" alt="商品" class="product-thumb">
+                    <div class="product-info">
+                        <p class="product-name">春季新款连衣裙 显瘦碎花裙</p>
+                        <div class="product-stats">
+                            <span>成交 142单</span>
+                            <span>¥28,258</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 趋势图表 -->
+        <section class="trend-chart-section">
+            <div class="section-header">
+                <h3 class="section-title">📈 成交趋势</h3>
+            </div>
+            <div class="chart-tabs">
+                <button class="chart-tab active" data-chart="amount">成交额</button>
+                <button class="chart-tab" data-chart="orders">订单数</button>
+                <button class="chart-tab" data-chart="roi">ROI</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="transactionChart"></canvas>
+            </div>
+            <div class="chart-summary">
+                <div class="summary-item">
+                    <span class="summary-label">峰值时段</span>
+                    <span class="summary-value">20:00-22:00</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">峰值成交</span>
+                    <span class="summary-value">¥52,360</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 跳转淘宝按钮 -->
+        <section class="taobao-link-section">
+            <button class="taobao-link-btn" onclick="openTaobaoApp()">
+                <span class="taobao-icon">🛒</span>
+                <span>打开淘宝查看更多</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </section>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="bottom-nav">
+        <a href="topic.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>话题分析</span>
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>榜单</span>
+        </a>
+        <a href="taobao-data.html" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>淘宝数据</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <!-- 授权失败弹窗 -->
+    <div class="modal-overlay" id="authModal" style="display: none;">
+        <div class="modal-content auth-modal">
+            <div class="modal-header">
+                <h3>淘宝授权</h3>
+                <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+            </div>
+            <div class="auth-modal-body">
+                <div class="auth-icon-large">🔐</div>
+                <p class="auth-message">需要授权淘宝账号才能查看成交数据</p>
+                <button class="auth-btn" onclick="authorizeTaobao()">立即授权</button>
+                <p class="auth-tip">授权后可查看实时成交数据、ROI等指标</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载状态 -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>数据加载中...</p>
+    </div>
+
+    <!-- Toast提示 -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/taobao-data.js"></script>
+</body>
+</html>

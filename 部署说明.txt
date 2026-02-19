@@ -1,0 +1,91 @@
+═══════════════════════════════════════════════════════
+  高楼粉干数字平台 - Vercel 部署指南
+═══════════════════════════════════════════════════════
+
+📱 部署后可从手机、电脑、任何设备访问！
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+方法一：Vercel 网页部署（最简单，推荐！）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ 打开浏览器访问：https://vercel.com
+2️⃣ 点击右上角 "Sign Up" 注册账号（可用 GitHub/Google/邮箱）
+3️⃣ 登录后，点击 "Add New..." → "Project"
+4️⃣ 选择 "Import Third-Party Git Repository" 或直接拖拽文件夹
+5️⃣ 上传整个 Maya 项目文件夹
+6️⃣ 项目设置：
+   - Framework Preset: Other
+   - Root Directory: ./
+   - Build Command: （留空）
+   - Output Directory: ./
+7️⃣ 点击 "Deploy" 按钮
+8️⃣ 等待 30-60 秒，部署完成！
+9️⃣ 获得访问地址，例如：https://maya-abc123.vercel.app
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+方法二：命令行部署（适合开发者）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+步骤 1：安装 Vercel CLI
+在 PowerShell 中运行：
+npm install -g vercel
+
+步骤 2：登录 Vercel
+vercel login
+
+步骤 3：在项目目录部署
+cd "D:\A项目文件夹\Maya"
+vercel
+
+步骤 4：按提示操作
+- Set up and deploy? Y
+- Which scope? (选择你的账号)
+- Link to existing project? N
+- What's your project's name? maya-gaolou-fengan
+- In which directory is your code located? ./
+- Want to override the settings? N
+
+步骤 5：部署完成
+Vercel 会自动部署并给你一个网址，类似：
+https://maya-gaolou-fengan.vercel.app
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+部署后需要做的事
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ 测试网站：在手机浏览器打开 Vercel 给的网址
+✅ 生成新二维码：
+   - 打开 qrcode-generator.html（需要先创建）
+   - 将"网页基础地址"改为你的 Vercel 网址
+   - 例如：https://maya-gaolou-fengan.vercel.app
+   - 点击"生成二维码"
+   - 下载所有二维码
+   - 打印并替换旧的二维码
+
+✅ 绑定自定义域名（可选）：
+   - 在 Vercel 项目设置中
+   - Settings → Domains
+   - 添加你的域名（如 www.gaolou-fengan.com）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+常见问题
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ 部署是免费的吗？
+✅ 是的！Vercel 个人项目完全免费。
+
+❓ 网址能改吗？
+✅ 可以在 Vercel 项目设置中修改项目名称，或绑定自定义域名。
+
+❓ 文件更新了怎么办？
+✅ 重新运行 vercel 命令，或在 Vercel 网站后台重新上传。
+
+❓ 手机访问慢怎么办？
+✅ Vercel 使用 CDN，全球加速，一般很快。如果慢，检查网络。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+技术支持
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 电话：400-888-1978
+🌐 Vercel 文档：https://vercel.com/docs

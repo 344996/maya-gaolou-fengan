@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>话题分析 - 顶流热搜</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body class="mobile-body">
+    <!-- 顶部导航栏 -->
+    <header class="mobile-header">
+        <div class="header-left">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header-center">
+            <h1 class="header-title">话题分析</h1>
+        </div>
+        <div class="header-right">
+            <button class="share-btn" onclick="sharePage()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 6L12 2L8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 2V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 话题切换区 -->
+        <section class="topic-switcher">
+            <div class="topic-card" onclick="openTopicSelector()">
+                <div class="topic-info">
+                    <div class="topic-badge">
+                        <span class="hot-icon">🔥</span>
+                        <span class="hot-label">热搜</span>
+                    </div>
+                    <h2 class="topic-title" id="currentTopicTitle">春节年货节大促</h2>
+                    <div class="topic-meta">
+                        <span class="topic-heat">热度 <strong>2.3亿</strong></span>
+                        <span class="topic-update">更新于 10分钟前</span>
+                    </div>
+                </div>
+                <div class="topic-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据看板 - 内容侧指标 -->
+        <section class="data-dashboard">
+            <div class="section-header">
+                <h3 class="section-title">📊 内容数据看板</h3>
+                <span class="section-tip">今日实时数据</span>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">128.5<span class="unit">万</span></div>
+                    <div class="metric-label">视频播放量</div>
+                    <div class="metric-trend up">↑ 12.3%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">8.7<span class="unit">%</span></div>
+                    <div class="metric-label">点赞率</div>
+                    <div class="metric-trend up">↑ 2.1%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">56.2<span class="unit">万</span></div>
+                    <div class="metric-label">点赞数</div>
+                    <div class="metric-trend up">↑ 8.5%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">12.8<span class="unit">万</span></div>
+                    <div class="metric-label">评论数</div>
+                    <div class="metric-trend up">↑ 5.2%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">23.4<span class="unit">万</span></div>
+                    <div class="metric-label">收藏数</div>
+                    <div class="metric-trend down">↓ 1.8%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3.2<span class="unit">万</span></div>
+                    <div class="metric-label">粉丝新增</div>
+                    <div class="metric-trend up">↑ 15.6%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">8,560</div>
+                    <div class="metric-label">直播涨粉数</div>
+                    <div class="metric-trend up">↑ 22.3%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3:25</div>
+                    <div class="metric-label">直播平均停留</div>
+                    <div class="metric-trend up">↑ 0.5min</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">6.8<span class="unit">%</span></div>
+                    <div class="metric-label">带货点击率</div>
+                    <div class="metric-trend up">↑ 1.2%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 访问行为数据 -->
+        <section class="visit-data-section">
+            <div class="section-header">
+                <h3 class="section-title">👥 访问行为数据</h3>
+                <span class="section-tip">今日汇总</span>
+            </div>
+            <div class="visit-metrics">
+                <div class="visit-metric-row">
+                    <div class="visit-metric-item">
+                        <span class="visit-label">今日总数据</span>
+                        <span class="visit-value">52.8万</span>
+                    </div>
+                    <div class="visit-metric-item">
+                        <span class="visit-label">总访问/停留</span>
+                        <span class="visit-value">38.2万 / 2m32s</span>
+                    </div>
+                </div>
+                <div class="visit-metric-row">
+                    <div class="visit-metric-item">
+                        <span class="visit-label">付费用户</span>
+                        <span class="visit-value">1,256</span>
+                    </div>
+                    <div class="visit-metric-item">
+                        <span class="visit-label">粉丝访问</span>
+                        <span class="visit-value">12.5万</span>
+                    </div>
+                </div>
+                <div class="visit-metric-row">
+                    <div class="visit-metric-item">
+                        <span class="visit-label">互动率</span>
+                        <span class="visit-value highlight">15.2%</span>
+                    </div>
+                    <div class="visit-metric-item">
+                        <span class="visit-label">转化率</span>
+                        <span class="visit-value highlight">3.8%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 趋势图区域 -->
+        <section class="trend-section">
+            <div class="section-header">
+                <h3 class="section-title">📈 趋势分析</h3>
+            </div>
+            <div class="trend-tabs">
+                <button class="trend-tab active" data-tab="fans">粉丝关注趋势</button>
+                <button class="trend-tab" data-tab="heat">热度趋势</button>
+            </div>
+            <div class="trend-chart-container">
+                <div class="trend-chart" id="trendChart">
+                    <canvas id="trendCanvas"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <span class="legend-item"><span class="legend-dot blue"></span>本周期</span>
+                    <span class="legend-item"><span class="legend-dot gray"></span>上周期</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关键词筛选 -->
+        <section class="keyword-section">
+            <div class="section-header">
+                <h3 class="section-title">🔍 关键词筛选</h3>
+            </div>
+            <div class="keyword-input-wrapper">
+                <input type="text" class="keyword-input" placeholder="输入关键词筛选相关内容..." id="keywordInput">
+                <button class="keyword-search-btn" onclick="filterByKeyword()">筛选</button>
+            </div>
+            <div class="keyword-tags">
+                <span class="keyword-tag active">全部</span>
+                <span class="keyword-tag">年货</span>
+                <span class="keyword-tag">春节</span>
+                <span class="keyword-tag">好物推荐</span>
+                <span class="keyword-tag">直播带货</span>
+                <span class="keyword-tag">爆款</span>
+            </div>
+        </section>
+
+        <!-- 功能入口区 -->
+        <section class="function-entry-section">
+            <div class="section-header">
+                <h3 class="section-title">🚀 功能入口</h3>
+            </div>
+            <div class="function-grid">
+                <div class="function-card" onclick="navigateTo('community')">
+                    <div class="function-icon">💬</div>
+                    <span class="function-name">社群互动</span>
+                </div>
+                <div class="function-card" onclick="navigateTo('diy')">
+                    <div class="function-icon">🎨</div>
+                    <span class="function-name">DIY玩法</span>
+                </div>
+                <div class="function-card" onclick="navigateTo('template')">
+                    <div class="function-icon">📝</div>
+                    <span class="function-name">模板中心</span>
+                </div>
+                <div class="function-card" onclick="navigateTo('hot')">
+                    <div class="function-icon">🔥</div>
+                    <span class="function-name">爆款助力</span>
+                </div>
+                <div class="function-card highlight" onclick="navigateTo('ranking.html')">
+                    <div class="function-icon">🛒</div>
+                    <span class="function-name">购物入口</span>
+                </div>
+                <div class="function-card taobao" onclick="navigateToTaobao()">
+                    <div class="function-icon">📦</div>
+                    <span class="function-name">跳转淘宝</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="bottom-nav">
+        <a href="topic.html" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>话题分析</span>
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>榜单</span>
+        </a>
+        <a href="taobao-data.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>淘宝数据</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <!-- 话题选择弹窗 -->
+    <div class="modal-overlay" id="topicModal" onclick="closeTopicSelector(event)">
+        <div class="modal-content topic-selector-modal">
+            <div class="modal-header">
+                <h3>切换话题</h3>
+                <button class="modal-close" onclick="closeTopicSelector()">&times;</button>
+            </div>
+            <div class="topic-search">
+                <input type="text" placeholder="搜索话题..." class="topic-search-input">
+            </div>
+            <div class="topic-list">
+                <div class="topic-item active" onclick="selectTopic('春节年货节大促', this)">
+                    <span class="topic-rank hot">1</span>
+                    <div class="topic-item-info">
+                        <span class="topic-item-title">春节年货节大促</span>
+                        <span class="topic-item-heat">2.3亿热度</span>
+                    </div>
+                </div>
+                <div class="topic-item" onclick="selectTopic('情人节好物推荐', this)">
+                    <span class="topic-rank">2</span>
+                    <div class="topic-item-info">
+                        <span class="topic-item-title">情人节好物推荐</span>
+                        <span class="topic-item-heat">1.8亿热度</span>
+                    </div>
+                </div>
+                <div class="topic-item" onclick="selectTopic('开学季必备神器', this)">
+                    <span class="topic-rank">3</span>
+                    <div class="topic-item-info">
+                        <span class="topic-item-title">开学季必备神器</span>
+                        <span class="topic-item-heat">9500万热度</span>
+                    </div>
+                </div>
+                <div class="topic-item" onclick="selectTopic('美妆新品首发', this)">
+                    <span class="topic-rank">4</span>
+                    <div class="topic-item-info">
+                        <span class="topic-item-title">美妆新品首发</span>
+                        <span class="topic-item-heat">8200万热度</span>
+                    </div>
+                </div>
+                <div class="topic-item" onclick="selectTopic('数码好物种草', this)">
+                    <span class="topic-rank">5</span>
+                    <div class="topic-item-info">
+                        <span class="topic-item-title">数码好物种草</span>
+                        <span class="topic-item-heat">6800万热度</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享弹窗 -->
+    <div class="modal-overlay" id="shareModal" onclick="closeShareModal(event)">
+        <div class="modal-content share-modal">
+            <div class="modal-header">
+                <h3>分享到</h3>
+                <button class="modal-close" onclick="closeShareModal()">&times;</button>
+            </div>
+            <div class="share-options">
+                <div class="share-option" onclick="shareToChannel('wechat')">
+                    <div class="share-icon wechat">💚</div>
+                    <span>微信</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('moments')">
+                    <div class="share-icon moments">📷</div>
+                    <span>朋友圈</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('weibo')">
+                    <div class="share-icon weibo">🔴</div>
+                    <span>微博</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('qq')">
+                    <div class="share-icon qq">💬</div>
+                    <span>QQ</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('copy')">
+                    <div class="share-icon copy">🔗</div>
+                    <span>复制链接</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载状态 -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- Toast提示 -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/topic.js"></script>
+</body>
+</html>

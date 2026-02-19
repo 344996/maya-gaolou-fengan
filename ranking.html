@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>顶流热搜榜 - 高转粉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body class="mobile-body">
+    <!-- 顶部导航栏 -->
+    <header class="mobile-header">
+        <div class="header-left">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="header-center">
+            <h1 class="header-title">顶流热搜 / 高转粉</h1>
+        </div>
+        <div class="header-right">
+            <button class="share-btn" onclick="sharePage()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 6L12 2L8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 2V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="main-content ranking-page">
+        <!-- 分类筛选入口 -->
+        <section class="category-filter">
+            <div class="category-scroll">
+                <button class="category-btn active" data-category="all">全部</button>
+                <button class="category-btn" data-category="beauty">美妆护肤</button>
+                <button class="category-btn" data-category="fashion">服饰穿搭</button>
+                <button class="category-btn" data-category="food">美食零食</button>
+                <button class="category-btn" data-category="digital">数码家电</button>
+                <button class="category-btn" data-category="home">家居日用</button>
+                <button class="category-btn" data-category="baby">母婴亲子</button>
+                <button class="category-btn" data-category="sports">运动户外</button>
+            </div>
+        </section>
+
+        <!-- 推荐内容卡片区 -->
+        <section class="recommend-section">
+            <div class="section-header">
+                <h3 class="section-title">✨ 推荐内容</h3>
+                <a href="#" class="see-more">查看更多 ></a>
+            </div>
+            <div class="recommend-cards-scroll">
+                <div class="recommend-card" onclick="viewContent('rec001')">
+                    <div class="recommend-cover">
+                        <img src="https://via.placeholder.com/160x200/FF6B6B/fff?text=热门1" alt="推荐内容">
+                        <span class="recommend-badge">🔥 爆款</span>
+                    </div>
+                    <div class="recommend-info">
+                        <p class="recommend-title">春节必备年货清单，这些你都买了吗？</p>
+                        <div class="recommend-stats">
+                            <span>👁 128万</span>
+                            <span>❤️ 8.5万</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-card" onclick="viewContent('rec002')">
+                    <div class="recommend-cover">
+                        <img src="https://via.placeholder.com/160x200/4ECDC4/fff?text=热门2" alt="推荐内容">
+                        <span class="recommend-badge hot">高转粉</span>
+                    </div>
+                    <div class="recommend-info">
+                        <p class="recommend-title">直播间3小时涨粉10万的秘密</p>
+                        <div class="recommend-stats">
+                            <span>👁 98.5万</span>
+                            <span>❤️ 6.2万</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-card" onclick="viewContent('rec003')">
+                    <div class="recommend-cover">
+                        <img src="https://via.placeholder.com/160x200/9B59B6/fff?text=热门3" alt="推荐内容">
+                        <span class="recommend-badge new">新晋</span>
+                    </div>
+                    <div class="recommend-info">
+                        <p class="recommend-title">情人节礼物攻略，男生必看！</p>
+                        <div class="recommend-stats">
+                            <span>👁 76.3万</span>
+                            <span>❤️ 5.8万</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-card" onclick="viewContent('rec004')">
+                    <div class="recommend-cover">
+                        <img src="https://via.placeholder.com/160x200/F39C12/fff?text=热门4" alt="推荐内容">
+                    </div>
+                    <div class="recommend-info">
+                        <p class="recommend-title">这款美白精华真的绝了！</p>
+                        <div class="recommend-stats">
+                            <span>👁 65.2万</span>
+                            <span>❤️ 4.3万</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 高转粉榜单 -->
+        <section class="ranking-section">
+            <div class="section-header">
+                <h3 class="section-title">🏆 高转粉榜单</h3>
+                <span class="update-time">更新于 12:00</span>
+            </div>
+            
+            <!-- Top 3 特殊展示 -->
+            <div class="top3-container">
+                <!-- Top 2 -->
+                <div class="top-card top2" onclick="viewRankingDetail(2)">
+                    <div class="top-rank">2</div>
+                    <div class="top-avatar">
+                        <img src="https://via.placeholder.com/80/4ECDC4/fff?text=2" alt="Top2">
+                    </div>
+                    <p class="top-name">美妆小达人</p>
+                    <p class="top-fans">+2.8万粉丝</p>
+                    <span class="top-rate">转粉率 12.5%</span>
+                </div>
+                
+                <!-- Top 1 -->
+                <div class="top-card top1" onclick="viewRankingDetail(1)">
+                    <div class="top-crown">👑</div>
+                    <div class="top-rank">1</div>
+                    <div class="top-avatar gold">
+                        <img src="https://via.placeholder.com/100/FFD700/333?text=1" alt="Top1">
+                    </div>
+                    <p class="top-name">年货直播间</p>
+                    <p class="top-fans">+5.6万粉丝</p>
+                    <span class="top-rate">转粉率 18.2%</span>
+                </div>
+                
+                <!-- Top 3 -->
+                <div class="top-card top3" onclick="viewRankingDetail(3)">
+                    <div class="top-rank">3</div>
+                    <div class="top-avatar">
+                        <img src="https://via.placeholder.com/80/CD7F32/fff?text=3" alt="Top3">
+                    </div>
+                    <p class="top-name">零食种草君</p>
+                    <p class="top-fans">+2.1万粉丝</p>
+                    <span class="top-rate">转粉率 10.8%</span>
+                </div>
+            </div>
+
+            <!-- 更多榜单 Top4+ -->
+            <div class="ranking-list">
+                <div class="ranking-item" onclick="viewRankingDetail(4)">
+                    <span class="ranking-num">4</span>
+                    <div class="ranking-avatar">
+                        <img src="https://via.placeholder.com/50/E74C3C/fff?text=4" alt="">
+                    </div>
+                    <div class="ranking-info">
+                        <p class="ranking-name">数码测评师老王</p>
+                        <p class="ranking-desc">专注数码产品测评</p>
+                    </div>
+                    <div class="ranking-data">
+                        <span class="ranking-fans">+1.8万</span>
+                        <span class="ranking-rate">9.2%</span>
+                    </div>
+                </div>
+                <div class="ranking-item" onclick="viewRankingDetail(5)">
+                    <span class="ranking-num">5</span>
+                    <div class="ranking-avatar">
+                        <img src="https://via.placeholder.com/50/3498DB/fff?text=5" alt="">
+                    </div>
+                    <div class="ranking-info">
+                        <p class="ranking-name">穿搭博主小美</p>
+                        <p class="ranking-desc">每日穿搭分享</p>
+                    </div>
+                    <div class="ranking-data">
+                        <span class="ranking-fans">+1.5万</span>
+                        <span class="ranking-rate">8.6%</span>
+                    </div>
+                </div>
+                <div class="ranking-item" onclick="viewRankingDetail(6)">
+                    <span class="ranking-num">6</span>
+                    <div class="ranking-avatar">
+                        <img src="https://via.placeholder.com/50/2ECC71/fff?text=6" alt="">
+                    </div>
+                    <div class="ranking-info">
+                        <p class="ranking-name">健身教练小李</p>
+                        <p class="ranking-desc">科学健身指导</p>
+                    </div>
+                    <div class="ranking-data">
+                        <span class="ranking-fans">+1.2万</span>
+                        <span class="ranking-rate">7.8%</span>
+                    </div>
+                </div>
+                <div class="ranking-item" onclick="viewRankingDetail(7)">
+                    <span class="ranking-num">7</span>
+                    <div class="ranking-avatar">
+                        <img src="https://via.placeholder.com/50/9B59B6/fff?text=7" alt="">
+                    </div>
+                    <div class="ranking-info">
+                        <p class="ranking-name">母婴好物推荐官</p>
+                        <p class="ranking-desc">宝妈必看好物</p>
+                    </div>
+                    <div class="ranking-data">
+                        <span class="ranking-fans">+9,800</span>
+                        <span class="ranking-rate">7.2%</span>
+                    </div>
+                </div>
+                <div class="ranking-item" onclick="viewRankingDetail(8)">
+                    <span class="ranking-num">8</span>
+                    <div class="ranking-avatar">
+                        <img src="https://via.placeholder.com/50/F39C12/fff?text=8" alt="">
+                    </div>
+                    <div class="ranking-info">
+                        <p class="ranking-name">美食探店小王</p>
+                        <p class="ranking-desc">全国美食探店</p>
+                    </div>
+                    <div class="ranking-data">
+                        <span class="ranking-fans">+8,500</span>
+                        <span class="ranking-rate">6.8%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="load-more-btn" onclick="loadMoreRanking()">
+                查看更多 Top 榜单
+            </button>
+        </section>
+
+        <!-- 购物区域 -->
+        <section class="shopping-section">
+            <div class="section-header">
+                <h3 class="section-title">🛍️ 购物专区</h3>
+                <a href="taobao-data.html" class="see-more">更多商品 ></a>
+            </div>
+            <div class="shopping-grid">
+                <div class="shopping-card" onclick="viewProduct('prod001')">
+                    <div class="shopping-img">
+                        <img src="https://via.placeholder.com/150x150/FF6B6B/fff?text=商品1" alt="商品">
+                        <span class="shopping-tag">热卖</span>
+                    </div>
+                    <div class="shopping-info">
+                        <p class="shopping-title">年货礼盒大礼包</p>
+                        <div class="shopping-price">
+                            <span class="price-current">¥99</span>
+                            <span class="price-original">¥168</span>
+                        </div>
+                        <div class="shopping-sales">已售 2.3万件</div>
+                    </div>
+                </div>
+                <div class="shopping-card" onclick="viewProduct('prod002')">
+                    <div class="shopping-img">
+                        <img src="https://via.placeholder.com/150x150/4ECDC4/fff?text=商品2" alt="商品">
+                        <span class="shopping-tag new">新品</span>
+                    </div>
+                    <div class="shopping-info">
+                        <p class="shopping-title">美白精华液30ml</p>
+                        <div class="shopping-price">
+                            <span class="price-current">¥199</span>
+                            <span class="price-original">¥299</span>
+                        </div>
+                        <div class="shopping-sales">已售 1.8万件</div>
+                    </div>
+                </div>
+                <div class="shopping-card" onclick="viewProduct('prod003')">
+                    <div class="shopping-img">
+                        <img src="https://via.placeholder.com/150x150/9B59B6/fff?text=商品3" alt="商品">
+                    </div>
+                    <div class="shopping-info">
+                        <p class="shopping-title">无线蓝牙耳机</p>
+                        <div class="shopping-price">
+                            <span class="price-current">¥159</span>
+                            <span class="price-original">¥259</span>
+                        </div>
+                        <div class="shopping-sales">已售 9,800件</div>
+                    </div>
+                </div>
+                <div class="shopping-card" onclick="viewProduct('prod004')">
+                    <div class="shopping-img">
+                        <img src="https://via.placeholder.com/150x150/F39C12/fff?text=商品4" alt="商品">
+                        <span class="shopping-tag">秒杀</span>
+                    </div>
+                    <div class="shopping-info">
+                        <p class="shopping-title">网红零食大礼包</p>
+                        <div class="shopping-price">
+                            <span class="price-current">¥59</span>
+                            <span class="price-original">¥99</span>
+                        </div>
+                        <div class="shopping-sales">已售 5.6万件</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 店铺推荐 -->
+            <div class="shop-recommend">
+                <h4 class="shop-recommend-title">🏪 人气店铺</h4>
+                <div class="shop-list">
+                    <div class="shop-item" onclick="viewShop('shop001')">
+                        <img src="https://via.placeholder.com/60/E74C3C/fff?text=店1" alt="店铺" class="shop-logo">
+                        <div class="shop-info">
+                            <p class="shop-name">年货旗舰店</p>
+                            <p class="shop-desc">粉丝 28万 | 好评率 99%</p>
+                        </div>
+                        <button class="shop-enter">进店</button>
+                    </div>
+                    <div class="shop-item" onclick="viewShop('shop002')">
+                        <img src="https://via.placeholder.com/60/3498DB/fff?text=店2" alt="店铺" class="shop-logo">
+                        <div class="shop-info">
+                            <p class="shop-name">美妆官方旗舰店</p>
+                            <p class="shop-desc">粉丝 56万 | 好评率 98%</p>
+                        </div>
+                        <button class="shop-enter">进店</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部导航 -->
+    <nav class="bottom-nav">
+        <a href="topic.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>话题分析</span>
+        </a>
+        <a href="ranking.html" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>榜单</span>
+        </a>
+        <a href="taobao-data.html" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>淘宝数据</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <!-- 分享弹窗 -->
+    <div class="modal-overlay" id="shareModal" onclick="closeShareModal(event)">
+        <div class="modal-content share-modal">
+            <div class="modal-header">
+                <h3>分享到</h3>
+                <button class="modal-close" onclick="closeShareModal()">&times;</button>
+            </div>
+            <div class="share-options">
+                <div class="share-option" onclick="shareToChannel('wechat')">
+                    <div class="share-icon wechat">💚</div>
+                    <span>微信</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('moments')">
+                    <div class="share-icon moments">📷</div>
+                    <span>朋友圈</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('weibo')">
+                    <div class="share-icon weibo">🔴</div>
+                    <span>微博</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('qq')">
+                    <div class="share-icon qq">💬</div>
+                    <span>QQ</span>
+                </div>
+                <div class="share-option" onclick="shareToChannel('copy')">
+                    <div class="share-icon copy">🔗</div>
+                    <span>复制链接</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载状态 -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- Toast提示 -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/ranking.js"></script>
+</body>
+</html>

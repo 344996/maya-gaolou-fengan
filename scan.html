@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫码体验 - 数字身份非遗伴手礼平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-icon">🎋</span>
+                    <span class="logo-text">非遗伴手礼</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html#product">核心产品</a></li>
+                <li><a href="index.html#modules">平台模块</a></li>
+                <li><a href="scan.html" class="active">扫码体验</a></li>
+                <li><a href="index.html#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 扫码体验主区域 -->
+    <main class="scan-page">
+        <div class="container">
+            <!-- 产品信息头部 -->
+            <div class="product-header">
+                <div class="product-badge">
+                    <span class="blockchain-badge">🔗 区块链认证</span>
+                </div>
+                <h1>非遗粉干礼盒</h1>
+                <p class="product-id">数字身份ID: <strong>NFY-2026-0214-001</strong></p>
+            </div>
+
+            <!-- 标签页导航 -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="trace">🌾 生产溯源</button>
+                <button class="tab-btn" data-tab="culture">🎬 文化叙事</button>
+                <button class="tab-btn" data-tab="interact">🎮 互动体验</button>
+                <button class="tab-btn" data-tab="shop">🛒 复购入口</button>
+            </div>
+
+            <!-- 标签页内容 -->
+            <div class="tab-content">
+                <!-- 生产溯源 -->
+                <div id="trace" class="tab-pane active">
+                    <div class="trace-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">👨‍🌾</div>
+                            <div class="timeline-content">
+                                <h3>农户信息</h3>
+                                <div class="info-card">
+                                    <div class="farmer-profile">
+                                        <div class="farmer-avatar">🧑‍🌾</div>
+                                        <div class="farmer-info">
+                                            <h4>张大山</h4>
+                                            <p>江西省某县非遗传承人</p>
+                                            <span class="tag">省级非遗传承人</span>
+                                        </div>
+                                    </div>
+                                    <p class="farmer-story">从事粉干制作35年，第五代传承人，坚持传统手工技艺。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">📅</div>
+                            <div class="timeline-content">
+                                <h3>生产时间</h3>
+                                <div class="info-card">
+                                    <div class="time-info">
+                                        <div class="time-item">
+                                            <span class="label">原料采收</span>
+                                            <span class="value">2026年2月10日</span>
+                                        </div>
+                                        <div class="time-item">
+                                            <span class="label">生产日期</span>
+                                            <span class="value">2026年2月12日</span>
+                                        </div>
+                                        <div class="time-item">
+                                            <span class="label">包装日期</span>
+                                            <span class="value">2026年2月13日</span>
+                                        </div>
+                                        <div class="time-item">
+                                            <span class="label">保质期至</span>
+                                            <span class="value">2027年2月12日</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">⚙️</div>
+                            <div class="timeline-content">
+                                <h3>工艺步骤</h3>
+                                <div class="info-card">
+                                    <div class="process-steps">
+                                        <div class="step">
+                                            <span class="step-num">1</span>
+                                            <span class="step-name">精选原料</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-num">2</span>
+                                            <span class="step-name">浸泡磨浆</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-num">3</span>
+                                            <span class="step-name">蒸煮成型</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-num">4</span>
+                                            <span class="step-name">手工拉丝</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-num">5</span>
+                                            <span class="step-name">自然晾晒</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-num">6</span>
+                                            <span class="step-name">包装入盒</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon">✅</div>
+                            <div class="timeline-content">
+                                <h3>质检报告</h3>
+                                <div class="info-card">
+                                    <div class="quality-report">
+                                        <div class="report-item passed">
+                                            <span class="check-icon">✓</span>
+                                            <span>原料检验合格</span>
+                                        </div>
+                                        <div class="report-item passed">
+                                            <span class="check-icon">✓</span>
+                                            <span>生产环境达标</span>
+                                        </div>
+                                        <div class="report-item passed">
+                                            <span class="check-icon">✓</span>
+                                            <span>产品检测合格</span>
+                                        </div>
+                                        <div class="report-item passed">
+                                            <span class="check-icon">✓</span>
+                                            <span>包装密封检验</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline btn-sm">查看完整报告</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文化叙事 -->
+                <div id="culture" class="tab-pane">
+                    <div class="culture-content">
+                        <!-- 非遗技艺视频 -->
+                        <div class="culture-section">
+                            <h3>🎬 粉干非遗技艺视频</h3>
+                            <div class="video-container">
+                                <div class="video-placeholder">
+                                    <span class="play-icon">▶</span>
+                                    <p>点击播放非遗技艺纪录片</p>
+                                </div>
+                            </div>
+                            <p class="video-description">记录传统粉干制作工艺，展现匠人精神与技艺传承。</p>
+                        </div>
+                        
+                        <!-- 红色故事 -->
+                        <div class="culture-section">
+                            <h3>🔴 "红军粮"的故事</h3>
+                            <div class="story-card">
+                                <div class="story-image">
+                                    <div class="story-placeholder">🏔️</div>
+                                </div>
+                                <div class="story-content">
+                                    <h4>革命年代的记忆</h4>
+                                    <p>在革命战争年代，粉干因其便于携带、保存时间长的特点，成为红军战士的重要干粮。当地百姓将精心制作的粉干送给红军，支援革命事业，因此粉干也被亲切地称为"红军粮"。</p>
+                                    <p>如今，这份红色记忆与非遗技艺一同传承，每一口粉干都承载着革命精神与家乡情怀。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 文化传承 -->
+                        <div class="culture-section">
+                            <h3>📜 非遗传承故事</h3>
+                            <div class="heritage-timeline">
+                                <div class="heritage-item">
+                                    <span class="year">清朝</span>
+                                    <p>技艺起源，张氏先祖创立</p>
+                                </div>
+                                <div class="heritage-item">
+                                    <span class="year">民国</span>
+                                    <p>工艺改良，声名远播</p>
+                                </div>
+                                <div class="heritage-item">
+                                    <span class="year">1950s</span>
+                                    <p>第三代传承人张福生</p>
+                                </div>
+                                <div class="heritage-item">
+                                    <span class="year">1990s</span>
+                                    <p>第四代传承人张明</p>
+                                </div>
+                                <div class="heritage-item">
+                                    <span class="year">现今</span>
+                                    <p>第五代传承人张大山，省级非遗传承人</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 互动体验 -->
+                <div id="interact" class="tab-pane">
+                    <div class="interact-content">
+                        <!-- DIY教程 -->
+                        <div class="interact-section">
+                            <h3>👨‍🍳 DIY烹饪教程</h3>
+                            <div class="recipe-grid">
+                                <div class="recipe-card">
+                                    <div class="recipe-image">🍜</div>
+                                    <h4>经典炒粉干</h4>
+                                    <p>传统做法，家常美味</p>
+                                    <button class="btn btn-sm btn-primary">查看教程</button>
+                                </div>
+                                <div class="recipe-card">
+                                    <div class="recipe-image">🥘</div>
+                                    <h4>汤粉干</h4>
+                                    <p>鲜香暖胃，营养丰富</p>
+                                    <button class="btn btn-sm btn-primary">查看教程</button>
+                                </div>
+                                <div class="recipe-card">
+                                    <div class="recipe-image">🥗</div>
+                                    <h4>凉拌粉干</h4>
+                                    <p>清爽开胃，夏日必备</p>
+                                    <button class="btn btn-sm btn-primary">查看教程</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 农户直播 -->
+                        <div class="interact-section">
+                            <h3>📺 农户直播互动</h3>
+                            <div class="live-card">
+                                <div class="live-preview">
+                                    <div class="live-placeholder">
+                                        <span class="live-badge">🔴 直播预告</span>
+                                        <p>张大山师傅直播</p>
+                                        <p class="live-time">2026年2月15日 15:00</p>
+                                    </div>
+                                </div>
+                                <div class="live-info">
+                                    <h4>传统粉干制作全过程</h4>
+                                    <p>跟随非遗传承人张大山师傅，亲眼见证一根粉干的诞生。</p>
+                                    <button class="btn btn-primary">预约直播提醒</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 积分奖励 -->
+                        <div class="interact-section">
+                            <h3>🎁 积分奖励</h3>
+                            <div class="points-card">
+                                <div class="points-header">
+                                    <span class="points-icon">⭐</span>
+                                    <div class="points-info">
+                                        <p class="points-label">当前积分</p>
+                                        <p class="points-value">150</p>
+                                    </div>
+                                </div>
+                                <div class="points-actions">
+                                    <div class="action-item">
+                                        <span>✓ 扫码获取</span>
+                                        <span>+10积分</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <span>分享好友</span>
+                                        <span>+20积分</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <span>完成评价</span>
+                                        <span>+30积分</span>
+                                    </div>
+                                    <div class="action-item">
+                                        <span>观看直播</span>
+                                        <span>+50积分</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline">查看积分商城</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 复购入口 -->
+                <div id="shop" class="tab-pane">
+                    <div class="shop-content">
+                        <!-- 当前产品 -->
+                        <div class="shop-section">
+                            <h3>📦 再次购买</h3>
+                            <div class="product-repurchase">
+                                <div class="repurchase-image">🎁</div>
+                                <div class="repurchase-info">
+                                    <h4>非遗粉干礼盒</h4>
+                                    <p class="product-spec">规格：500g × 4包</p>
+                                    <div class="price-row">
+                                        <span class="current-price">¥128</span>
+                                        <span class="original-price">¥168</span>
+                                        <span class="discount-tag">会员8折</span>
+                                    </div>
+                                    <button class="btn btn-primary btn-lg">立即复购</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 推荐产品 -->
+                        <div class="shop-section">
+                            <h3>🌟 其他非遗产品</h3>
+                            <div class="recommend-grid">
+                                <div class="recommend-card">
+                                    <div class="recommend-image">🍵</div>
+                                    <h4>非遗茶叶礼盒</h4>
+                                    <p class="recommend-price">¥238</p>
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                </div>
+                                <div class="recommend-card">
+                                    <div class="recommend-image">🍯</div>
+                                    <h4>土法酿蜂蜜</h4>
+                                    <p class="recommend-price">¥88</p>
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                </div>
+                                <div class="recommend-card">
+                                    <div class="recommend-image">🧺</div>
+                                    <h4>手工竹编礼篮</h4>
+                                    <p class="recommend-price">¥168</p>
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                </div>
+                                <div class="recommend-card">
+                                    <div class="recommend-image">🏺</div>
+                                    <h4>传统陶艺套装</h4>
+                                    <p class="recommend-price">¥358</p>
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 定制服务 -->
+                        <div class="shop-section">
+                            <h3>✨ 专属定制</h3>
+                            <div class="custom-card">
+                                <div class="custom-icon">🎨</div>
+                                <div class="custom-info">
+                                    <h4>企业/活动定制礼盒</h4>
+                                    <p>支持定制包装、定制组合、企业Logo印制，打造专属非遗伴手礼。</p>
+                                    <button class="btn btn-primary">咨询定制</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部操作栏 -->
+    <div class="bottom-bar">
+        <div class="container">
+            <button class="bottom-btn">
+                <span class="btn-icon">💬</span>
+                <span>客服</span>
+            </button>
+            <button class="bottom-btn">
+                <span class="btn-icon">❤️</span>
+                <span>收藏</span>
+            </button>
+            <button class="bottom-btn">
+                <span class="btn-icon">📤</span>
+                <span>分享</span>
+            </button>
+            <button class="bottom-btn primary">
+                <span>立即购买</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer footer-simple">
+        <div class="container">
+            <p>&copy; 2026 数字身份非遗伴手礼平台 版权所有</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

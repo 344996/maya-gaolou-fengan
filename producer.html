@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生产端管理 - 数字身份非遗伴手礼平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <span class="logo-icon">🎋</span>
+            <span class="logo-text">生产端管理</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span>数据概览</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span>生产模板</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📦</span>
+                <span>产品管理</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🔍</span>
+                <span>溯源记录</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📡</span>
+                <span>设备管理</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span>培训中心</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>系统设置</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="dashboard-main">
+        <!-- 顶部栏 -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>数据概览</h1>
+                <p class="breadcrumb">生产端 / 数据概览</p>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <span class="user-avatar">👨‍🌾</span>
+                    <span class="user-name">张大山</span>
+                    <span class="user-role">省级非遗传承人</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">📦</div>
+                <div class="stat-info">
+                    <p class="stat-label">本月产量</p>
+                    <p class="stat-value">1,280</p>
+                    <p class="stat-change up">↑ 12% 较上月</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">✅</div>
+                <div class="stat-info">
+                    <p class="stat-label">溯源登记</p>
+                    <p class="stat-value">1,256</p>
+                    <p class="stat-change up">98% 完成率</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">📱</div>
+                <div class="stat-info">
+                    <p class="stat-label">扫码次数</p>
+                    <p class="stat-value">3,420</p>
+                    <p class="stat-change up">↑ 28% 较上月</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon purple">⭐</div>
+                <div class="stat-info">
+                    <p class="stat-label">用户好评</p>
+                    <p class="stat-value">4.9</p>
+                    <p class="stat-change">156条评价</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="dashboard-content">
+            <!-- 左侧主要内容 -->
+            <div class="content-main">
+                <!-- 标准化生产模板 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📋 标准化生产模板</h2>
+                        <button class="btn btn-sm btn-primary">+ 新建批次</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="template-list">
+                            <div class="template-item">
+                                <div class="template-info">
+                                    <span class="template-icon">🍚</span>
+                                    <div>
+                                        <h4>粉干生产标准流程</h4>
+                                        <p>六步标准工艺，确保品质稳定</p>
+                                    </div>
+                                </div>
+                                <div class="template-actions">
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                    <button class="btn btn-sm btn-primary">开始生产</button>
+                                </div>
+                            </div>
+                            <div class="template-item">
+                                <div class="template-info">
+                                    <span class="template-icon">🎁</span>
+                                    <div>
+                                        <h4>礼盒包装标准</h4>
+                                        <p>包装规范、贴码流程</p>
+                                    </div>
+                                </div>
+                                <div class="template-actions">
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                    <button class="btn btn-sm btn-primary">开始包装</button>
+                                </div>
+                            </div>
+                            <div class="template-item">
+                                <div class="template-info">
+                                    <span class="template-icon">🔬</span>
+                                    <div>
+                                        <h4>质检报告模板</h4>
+                                        <p>标准检测项目清单</p>
+                                    </div>
+                                </div>
+                                <div class="template-actions">
+                                    <button class="btn btn-sm btn-outline">查看详情</button>
+                                    <button class="btn btn-sm btn-primary">填写报告</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 近期生产批次 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📦 近期生产批次</h2>
+                        <a href="#" class="link">查看全部 →</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>批次号</th>
+                                    <th>产品</th>
+                                    <th>数量</th>
+                                    <th>生产日期</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>NFY-2026-0214-001</code></td>
+                                    <td>非遗粉干礼盒</td>
+                                    <td>200盒</td>
+                                    <td>2026-02-14</td>
+                                    <td><span class="status-badge progress">生产中</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>NFY-2026-0213-002</code></td>
+                                    <td>非遗粉干礼盒</td>
+                                    <td>150盒</td>
+                                    <td>2026-02-13</td>
+                                    <td><span class="status-badge completed">已完成</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>NFY-2026-0212-001</code></td>
+                                    <td>非遗粉干礼盒</td>
+                                    <td>180盒</td>
+                                    <td>2026-02-12</td>
+                                    <td><span class="status-badge completed">已完成</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                                <tr>
+                                    <td><code>NFY-2026-0211-001</code></td>
+                                    <td>非遗粉干礼盒</td>
+                                    <td>200盒</td>
+                                    <td>2026-02-11</td>
+                                    <td><span class="status-badge completed">已完成</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="content-sidebar">
+                <!-- 溯源设备状态 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📡 溯源设备</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="device-list">
+                            <div class="device-item">
+                                <span class="device-icon online">📷</span>
+                                <div class="device-info">
+                                    <p class="device-name">生产记录仪 #1</p>
+                                    <p class="device-status online">在线运行</p>
+                                </div>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon online">🏷️</span>
+                                <div class="device-info">
+                                    <p class="device-name">二维码打印机</p>
+                                    <p class="device-status online">在线运行</p>
+                                </div>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon online">📊</span>
+                                <div class="device-info">
+                                    <p class="device-name">环境监测器</p>
+                                    <p class="device-status online">温度24°C 湿度65%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 培训支持 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📚 培训中心</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="training-list">
+                            <div class="training-item">
+                                <span class="training-icon">🎬</span>
+                                <div class="training-info">
+                                    <p class="training-name">溯源设备操作指南</p>
+                                    <p class="training-duration">15分钟</p>
+                                </div>
+                                <span class="training-status completed">已完成</span>
+                            </div>
+                            <div class="training-item">
+                                <span class="training-icon">📄</span>
+                                <div class="training-info">
+                                    <p class="training-name">生产标准规范</p>
+                                    <p class="training-duration">文档</p>
+                                </div>
+                                <span class="training-status completed">已完成</span>
+                            </div>
+                            <div class="training-item new">
+                                <span class="training-icon">🎬</span>
+                                <div class="training-info">
+                                    <p class="training-name">直播技巧培训</p>
+                                    <p class="training-duration">30分钟</p>
+                                </div>
+                                <span class="training-status new">新课程</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-block">查看全部课程</button>
+                    </div>
+                </div>
+
+                <!-- 快捷操作 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>⚡ 快捷操作</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="quick-actions">
+                            <button class="quick-btn">
+                                <span class="quick-icon">📦</span>
+                                <span>新建批次</span>
+                            </button>
+                            <button class="quick-btn">
+                                <span class="quick-icon">📝</span>
+                                <span>填写记录</span>
+                            </button>
+                            <button class="quick-btn">
+                                <span class="quick-icon">🖨️</span>
+                                <span>打印标签</span>
+                            </button>
+                            <button class="quick-btn">
+                                <span class="quick-icon">📺</span>
+                                <span>开始直播</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

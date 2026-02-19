@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+.vercel
+*.log
+
+# 排除大文件用于部署
+视频/
+video/
+直播图片/
+商品/
+*.mp4
+*.mov
+*.avi

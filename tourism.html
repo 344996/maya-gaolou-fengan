@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文旅端管理 - 数字身份非遗伴手礼平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <!-- 侧边栏 -->
+    <aside class="sidebar sidebar-tourism">
+        <div class="sidebar-header">
+            <span class="logo-icon">🎋</span>
+            <span class="logo-text">文旅端管理</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📊</span>
+                <span>数据看板</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🎨</span>
+                <span>场景定制</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📦</span>
+                <span>产品管理</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🔗</span>
+                <span>分销渠道</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📈</span>
+                <span>销售分析</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">💰</span>
+                <span>结算中心</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>系统设置</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="dashboard-main">
+        <!-- 顶部栏 -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>数据看板</h1>
+                <p class="breadcrumb">文旅端 / 数据看板</p>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <span class="user-avatar">🏔️</span>
+                    <span class="user-name">青山景区</span>
+                    <span class="user-role">合作景区</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">💰</div>
+                <div class="stat-info">
+                    <p class="stat-label">本月销售额</p>
+                    <p class="stat-value">¥28,560</p>
+                    <p class="stat-change up">↑ 23% 较上月</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">📦</div>
+                <div class="stat-info">
+                    <p class="stat-label">销售数量</p>
+                    <p class="stat-value">423</p>
+                    <p class="stat-change up">↑ 18% 较上月</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">👥</div>
+                <div class="stat-info">
+                    <p class="stat-label">购买客户</p>
+                    <p class="stat-value">356</p>
+                    <p class="stat-change up">↑ 15% 较上月</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon purple">🔄</div>
+                <div class="stat-info">
+                    <p class="stat-label">复购率</p>
+                    <p class="stat-value">34%</p>
+                    <p class="stat-change up">↑ 5% 较上月</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="dashboard-content">
+            <!-- 左侧主要内容 -->
+            <div class="content-main">
+                <!-- 场景定制系统 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🎨 场景定制系统</h2>
+                        <button class="btn btn-sm btn-primary">+ 新建定制方案</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="scene-grid">
+                            <div class="scene-card">
+                                <div class="scene-preview">
+                                    <div class="scene-placeholder">🏔️</div>
+                                </div>
+                                <div class="scene-info">
+                                    <h4>青山特色礼盒</h4>
+                                    <p>景区专属包装设计</p>
+                                    <div class="scene-meta">
+                                        <span class="tag">热卖</span>
+                                        <span class="sales">已售 168盒</span>
+                                    </div>
+                                </div>
+                                <div class="scene-actions">
+                                    <button class="btn btn-sm btn-outline">编辑</button>
+                                    <button class="btn btn-sm btn-primary">推广</button>
+                                </div>
+                            </div>
+                            <div class="scene-card">
+                                <div class="scene-preview">
+                                    <div class="scene-placeholder">🏨</div>
+                                </div>
+                                <div class="scene-info">
+                                    <h4>民宿伴手礼</h4>
+                                    <p>温馨小包装设计</p>
+                                    <div class="scene-meta">
+                                        <span class="tag">新品</span>
+                                        <span class="sales">已售 86盒</span>
+                                    </div>
+                                </div>
+                                <div class="scene-actions">
+                                    <button class="btn btn-sm btn-outline">编辑</button>
+                                    <button class="btn btn-sm btn-primary">推广</button>
+                                </div>
+                            </div>
+                            <div class="scene-card add-new">
+                                <div class="add-icon">+</div>
+                                <p>新建定制方案</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分销渠道管理 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🔗 分销渠道</h2>
+                        <a href="#" class="link">管理渠道 →</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>渠道名称</th>
+                                    <th>类型</th>
+                                    <th>本月销量</th>
+                                    <th>销售额</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>景区游客中心</td>
+                                    <td>线下</td>
+                                    <td>156</td>
+                                    <td>¥10,530</td>
+                                    <td><span class="status-badge completed">正常</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                                <tr>
+                                    <td>小程序商城</td>
+                                    <td>线上</td>
+                                    <td>189</td>
+                                    <td>¥12,780</td>
+                                    <td><span class="status-badge completed">正常</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                                <tr>
+                                    <td>合作民宿</td>
+                                    <td>线下</td>
+                                    <td>78</td>
+                                    <td>¥5,250</td>
+                                    <td><span class="status-badge completed">正常</span></td>
+                                    <td><button class="btn btn-xs btn-outline">详情</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 销售趋势图表 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📈 销售趋势</h2>
+                        <div class="chart-filter">
+                            <button class="filter-btn active">周</button>
+                            <button class="filter-btn">月</button>
+                            <button class="filter-btn">年</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 60%"><span>周一</span></div>
+                                <div class="bar" style="height: 80%"><span>周二</span></div>
+                                <div class="bar" style="height: 45%"><span>周三</span></div>
+                                <div class="bar" style="height: 90%"><span>周四</span></div>
+                                <div class="bar" style="height: 75%"><span>周五</span></div>
+                                <div class="bar highlight" style="height: 100%"><span>周六</span></div>
+                                <div class="bar highlight" style="height: 95%"><span>周日</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧边栏 -->
+            <div class="content-sidebar">
+                <!-- 数据看板摘要 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>📊 数据摘要</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="summary-list">
+                            <div class="summary-item">
+                                <span class="summary-label">今日销量</span>
+                                <span class="summary-value">28盒</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">今日销售额</span>
+                                <span class="summary-value">¥1,890</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">扫码互动</span>
+                                <span class="summary-value">156次</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">好评数</span>
+                                <span class="summary-value">23条</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 热销产品 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🔥 热销产品</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="hot-list">
+                            <div class="hot-item">
+                                <span class="hot-rank">1</span>
+                                <div class="hot-info">
+                                    <p class="hot-name">青山特色礼盒</p>
+                                    <p class="hot-sales">销量 168</p>
+                                </div>
+                            </div>
+                            <div class="hot-item">
+                                <span class="hot-rank">2</span>
+                                <div class="hot-info">
+                                    <p class="hot-name">民宿伴手礼</p>
+                                    <p class="hot-sales">销量 86</p>
+                                </div>
+                            </div>
+                            <div class="hot-item">
+                                <span class="hot-rank">3</span>
+                                <div class="hot-info">
+                                    <p class="hot-name">标准礼盒</p>
+                                    <p class="hot-sales">销量 72</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 快捷操作 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>⚡ 快捷操作</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="quick-actions">
+                            <button class="quick-btn">
+                                <span class="quick-icon">🎨</span>
+                                <span>新建定制</span>
+                            </button>
+                            <button class="quick-btn">
+                                <span class="quick-icon">📦</span>
+                                <span>采购补货</span>
+                            </button>
+                            <button class="quick-btn">
+                                <span class="quick-icon">📊</span>
+                                <span>导出报表</span>
+                            </button>
+                            <button class="quick-btn">
+                                <span class="quick-icon">💬</span>
+                                <span>联系客服</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 最新订单 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>🛒 最新订单</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="order-list">
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <p class="order-product">青山特色礼盒 x2</p>
+                                    <p class="order-time">10分钟前</p>
+                                </div>
+                                <span class="order-amount">¥136</span>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <p class="order-product">民宿伴手礼 x1</p>
+                                    <p class="order-time">25分钟前</p>
+                                </div>
+                                <span class="order-amount">¥68</span>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <p class="order-product">青山特色礼盒 x3</p>
+                                    <p class="order-time">1小时前</p>
+                                </div>
+                                <span class="order-amount">¥204</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-block">查看全部订单</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

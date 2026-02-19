@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高楼粉干数字身份平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span>📞 联系我们：400-888-1978</span>
+                <span>投资者热线</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="my-points-display">
+                    <span class="points-label">🎁 我的积分：</span>
+                    <span class="points-value" id="totalPointsDisplay">0</span>
+                    <span class="points-unit">Pts</span>
+                </div>
+                <a href="#">法律/隐私</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#traceability" class="active">生产溯源</a></li>
+                <li><a href="#video">非遗技艺</a></li>
+                <li><a href="#story">红色故事</a></li>
+                <li><a href="#cooking">DIY烹饪</a></li>
+                <li><a href="#live">直播互动</a></li>
+                <li><a href="#points">积分奖励</a></li>
+                <li><a href="#repurchase">复购入口</a></li>
+                <li><a href="#quiz" class="quiz-nav-btn">知识问答</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 生产溯源 -->
+    <section id="traceability" class="traceability-section">
+        <div class="container">
+            <div class="section-header">
+               
+                <h2>高楼粉干产品溯源信息</h2>
+            </div>
+            
+            <div class="traceability-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">高楼粉干产品溯源信息</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="label">合作社名称</td>
+                            <td>瑞安市龙丰粉丝厂</td>
+                        </tr>
+                        <tr>
+                            <td class="label">合作社所在地</td>
+                            <td>浙江省温州市瑞安市高楼镇湖石龙村</td>
+                        </tr>
+                        <tr>
+                            <td class="label">工艺责任人</td>
+                            <td>曹冠永</td>
+                        </tr>
+                        <tr>
+                            <td class="label">生产时间</td>
+                            <td>2026/01/01</td>
+                        </tr>
+                        <tr>
+                            <td class="label">质检报告</td>
+                            <td>合格</td>
+                        </tr>
+                        <tr>
+                            <td class="label">批次编号</td>
+                            <td id="batch-code">扫码查询</td>
+                        </tr>
+                        <tr>
+                            <td class="label">保质期</td>
+                            <td>24个月</td>
+                        </tr>
+                       
+                </table>
+            </div>
+
+        
+
+            <div class="company-intro-header">
+                <h3>企业介绍</h3>
+                <p>COMPANY INFORMATION</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 粉干非遗技艺视频 -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>粉干非遗技艺</h2>
+            </div>
+            <div class="heritage-layout">
+                <!-- 左侧视频 -->
+                <div class="heritage-video">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="video/123.mp4" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+                </div>
+                <!-- 右侧工艺步骤 -->
+                <div class="heritage-steps">
+                    <div class="steps-header">
+                        <h3>🌾 传统工艺八招</h3>
+                    </div>
+                    <div class="steps-scroll-container">
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232355_468_845.jpg" alt="原料选择">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第一招</div>
+                                <h4>原料选择</h4>
+                                <p>选用糯米，要求颗粒米为原料，优先选择支链淀粉含量高、透明度好的优质大米，以确保出厂口感软糯、不易断裂。配比工艺会将糯米与粳米按比例（约7:3）混合，以提升品质。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232358_469_845.jpg" alt="浸泡与淘米">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第二招</div>
+                                <h4>浸泡与淘米</h4>
+                                <p>将大米洗净后浸泡约4小时，再浸1–2小时，使淀粉充分吸水膨胀。用清水淘洗，目的是洗净杂质和表面灰尘，减少蒸煮时混浊度。此步骤对后续口感与质量至关重要。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232401_470_845.jpg" alt="粉碎与搅拌">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第三招</div>
+                                <h4>粉碎与搅拌</h4>
+                                <p>将浸泡好的大米晾干水分，并均匀混合淀粉与水（一般为大米重量的30–34%），以达到干湿适中。根据淀粉的状态，部分工艺会加入少量盐水（约0.5%），以增强筋度。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232405_471_845.png" alt="压条打熟子">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第四招</div>
+                                <h4>压条（打熟子）</h4>
+                                <p>将混合物均匀铺装到专用压制模具或蒸板中，蒸煮时间8–10分钟，温度控制在90–100°C。蒸熟后进行冷却，为后续挤压和定型做准备。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232408_472_845.png" alt="搓料">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第五招</div>
+                                <h4>搓料</h4>
+                                <p>将粉团进行多次揉搓，使其更加均匀细腻。过程中适量撒粉防粘，避免颗粒化及气泡产生，保证后续出条顺畅。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232411_473_845.png" alt="出条压条">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第六招</div>
+                                <h4>出条（压条）</h4>
+                                <p>这是决定产品质量的关键环节。不采用二次醒发工艺，通过多台机器同步挤压成型。生产过程中需严格控制温湿度，确保条形均匀、不断裂。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232418_474_845.jpg" alt="成型与切面">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第七招</div>
+                                <h4>成型与切面</h4>
+                                <p>出条后的面条下垂自然风干，自然定型。根据成型时间，进行挂架干燥（约15–30分钟），随后进行切割（如平切面、圆切面或U型切面），以满足不同规格需求。</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-image">
+                                <img src="photo/微信图片_20260217232421_475_845.png" alt="包装与储存">
+                            </div>
+                            <div class="step-content">
+                                <div class="step-number">第八招</div>
+                                <h4>包装与储存</h4>
+                                <p>基于面条的干燥程度进行定量包装（如200克装或定制规格）。包装前进行质量检测，封口密封防潮，储存于阴凉干燥环境。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 红色故事 -->
+    <section id="story" class="red-story-section">
+        <div class="container">
+            <div class="section-header">
+               
+                <h2>一份特别的伴手礼：行军袋里的粉干</h2>
+            </div>
+            
+            <div class="story-hero-image">
+                <img src="photo/红色故事模块图片.jpg" alt="红色故事">
+            </div>
+            
+            <article class="story-content">
+                <p class="story-lead">这个故事发生在温州平阳县的山门镇。</p>
+                
+                <p>70多年前，由红军挺进师改编的国民革命军闽浙边抗日游击总队将士，从山门街出发，准备奔赴皖南抗日前线。当时根据地的条件非常艰苦，但老百姓们听说自己的队伍要远征，纷纷自发前来送行。他们没有什么贵重的东西，就把家里最好的、最能填饱肚子的食物，拼命往战士们的背包里塞。这些食物里，除了番薯干、鸡蛋，就有我们说的粉干。</p>
+                
+                <h3 class="story-subtitle">为什么是粉干？</h3>
+                <p>粉干由大米制成，晒干后重量轻、不易变质，而且烹煮方便。对于需要长途跋涉的战士来说，这无疑是极佳的"军用口粮"。</p>
+                
+                <h3 class="story-subtitle">"红军干粮"的由来</h3>
+                <p>这个充满温情的送别场景，后来成了当地代代相传的红色记忆。如今，山门镇依托这段历史，专门打造了"红军干粮"品牌。当你打开印着"红都山门"LOGO的礼品盒，里面装着的鸡蛋、粉干等土特产，正是对当年军民鱼水情最深情的纪念。</p>
+                
+                <p>虽然高楼和山门分属瑞安和平阳两个不同的市（县），但在地理上，它们同属温州南部山区，都是当年红军挺进师在浙南坚持三年游击战争的核心区域。革命火种在这一片山区是连成片的，许多红色记忆其实是共享的。因此，发生在平阳山门的"送粉干"故事，可以看作是整个浙南革命老区"军民一家亲"的一个缩影。瑞安葛藤湖、高楼粉干，在精神内核上与它是完全相通的。</p>
+                
+                <p class="story-conclusion">所以，关于温州粉干最生动的红色故事，或许并不是某一场惊心动魄的战斗，而是这样一个充满烟火气和人情味的送别场景。它让后人知道，那一根根纤细的粉干里，不仅有大米的醇香，更藏着老百姓对子弟兵最朴素、最深沉的爱。</p>
+                <p class="story-lead"> 这个名字，源自瑞安葛藤湖那片被革命热血浸润过的土地。</p>
+                <p>在这里，每一缕山风都曾拂过红军战士的脸庞，每一寸溪流都映照过军民相依的身影。我们以此为名，不仅是为了铭记，更是为了让那段波澜壮阔的历史，以最温润的方式走进今天的生活。</p>
+                <p>在“绛藤间”的每一个伴手礼盒里，装的不仅仅是高山粉干、农家土鸡蛋这些朴素的物产，更是一段段代代相传的红色记忆。我们希望，当你捧起这份来自葛藤湖的礼物，品尝到的不仅是山川风物的醇厚滋味，更能感受到那份穿越时空的精神温度——那是老百姓对子弟兵最深沉的爱，也是这片红土地永远不灭的初心。</p>
+                <p class="story-lead">一盒风物，一脉相承。</p>
+                <p>"绛藤间"愿以最真挚的方式，讲述瑞安葛藤湖的红色历史，传承中国独有的红色精神文化。</p>
+            </article>
+            
+            <div class="story-brand-slogan">
+                <p>一盒风物，一脉相承。——绛藤间</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIY烹饪教程 -->
+    <section id="cooking" class="cooking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>粉干菜系</h2>
+            </div>
+            
+            <!-- 首页：三选一右滑切换 -->
+            <div class="diy-homepage" id="diyHomepage">
+                <div class="category-slider">
+                    <div class="category-slides" id="categorySlides">
+                        <!-- 经典 -->
+                        <div class="category-slide active" data-category="classic">
+                            <div class="category-content">
+                                <div class="category-text">
+                                    <h3>经典</h3>
+                                    <p class="category-desc">传承百年的经典做法，农家烧粉干与炒粉干，还原最地道的瑞安风味。</p>
+                                    <button class="btn-enter-category" onclick="enterDishList('classic')">进入菜谱 →</button>
+                                </div>
+                                <div class="category-image">
+                                    <img src="photo/DIY烹饪图片/经典右滑式封面.jpg" alt="经典">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 营养 -->
+                        <div class="category-slide" data-category="nutrition">
+                            <div class="category-content">
+                                <div class="category-text">
+                                    <h3>营养</h3>
+                                    <p class="category-desc">23道营养搭配菜品，含低脂健康系列，满足全家人的营养需求。</p>
+                                    <button class="btn-enter-category" onclick="enterDishList('nutrition')">进入菜谱 →</button>
+                                </div>
+                                <div class="category-image">
+                                    <img src="photo/DIY烹饪图片/营养右滑式封面.jpg" alt="营养">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 金汤 -->
+                        <div class="category-slide" data-category="golden">
+                            <div class="category-content">
+                                <div class="category-text">
+                                    <h3>金汤</h3>
+                                    <p class="category-desc">5道浓郁汤底菜品，佛跳墙、酸辣汤，每一口都是极致享受。</p>
+                                    <button class="btn-enter-category" onclick="enterDishList('golden')">进入菜谱 →</button>
+                                </div>
+                                <div class="category-image">
+                                    <img src="photo/DIY烹饪图片/金汤右滑式封面.jpg" alt="金汤">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 滑动指示器 -->
+                    <div class="slider-indicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                    </div>
+                    <!-- 滑动按钮 -->
+                    <button class="slider-btn prev" onclick="slideCategory(-1)">‹</button>
+                    <button class="slider-btn next" onclick="slideCategory(1)">›</button>
+                </div>
+                <div class="swipe-hint">← 左右滑动切换分类 →</div>
+            </div>
+
+            <!-- 二级页：菜品列表（上滑式） -->
+            <div class="diy-dishlist" id="diyDishlist" style="display:none;">
+                <div class="dishlist-header">
+                    <button class="btn-back" onclick="backToHomepage()">← 返回</button>
+                    <h3 id="dishlistTitle">经典</h3>
+                    <span class="dish-count" id="dishCount">1/2</span>
+                </div>
+                <div class="dish-slider-container">
+                    <div class="dish-slider" id="dishSlider">
+                        <!-- 动态填充菜品卡片 -->
+                    </div>
+                    <div class="vertical-hint">↑ 上下滑动切换菜品 ↓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 三级页：教学详情弹窗 -->
+    <div class="dish-detail-modal" id="dishModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDishModal()">&times;</button>
+            
+            <!-- 视频区域 -->
+            <div class="video-wrapper">
+                <video id="dishVideo" controls playsinline>
+                    <source src="" type="video/mp4">
+                </video>
+                <!-- 视频知识点提示 -->
+                <div class="video-tips" id="videoTips" style="display:none;">
+                    <span class="tip-icon">💡</span>
+                    <span class="tip-text" id="tipText">你知道吗？古诗词中也有写粉干的……</span>
+                </div>
+            </div>
+            
+            <!-- 菜品标题 -->
+            <div class="dish-title-bar">
+                <h3 id="dishTitle">农家烧粉干</h3>
+            </div>
+            
+            <!-- 做法说明 -->
+            <div class="recipe-section">
+                <h4>📝 做法说明</h4>
+                <div class="recipe-content" id="recipeContent">
+                    <p><strong>食材准备：</strong>粉干200g、五花肉100g、青菜适量、葱姜蒜、酱油、盐</p>
+                    <p><strong>步骤：</strong></p>
+                    <ol>
+                        <li>粉干提前用温水泡软，沥干备用</li>
+                        <li>五花肉切片，青菜洗净切段</li>
+                        <li>热锅冷油，爆香葱姜蒜</li>
+                        <li>加入五花肉翻炒至变色</li>
+                        <li>加入粉干和适量清水，中火焖煮</li>
+                        <li>待汤汁收干，加入青菜、调味出锅</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- 上传作品 -->
+            <div class="upload-section">
+                <h4>📷 上传你的作品</h4>
+                <p class="upload-desc">完成烹饪后，拍照上传你的作品，AI将为你的厨艺打分并提供建议</p>
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="workUpload" accept="image/*" hidden>
+                    <div class="upload-placeholder">
+                        <span class="upload-icon">📷</span>
+                        <p>点击上传作品照片</p>
+                    </div>
+                    <div class="upload-preview" id="uploadPreview" style="display:none;">
+                        <img id="previewImg" src="" alt="预览">
+                        <button class="btn-remove-img" onclick="removeUploadedImg()">×</button>
+                    </div>
+                </div>
+                <button class="btn-ai-evaluate" id="btnAiEvaluate" style="display:none;" onclick="submitForAIEvaluation()">🤖 提交AI评价</button>
+                <div class="ai-feedback" id="aiFeedback" style="display:none;">
+                    <div class="ai-score">
+                        <span class="score-label">AI评分</span>
+                        <span class="score-value" id="aiScore">85</span>
+                        <span class="score-unit">分</span>
+                    </div>
+                    <div class="ai-comments">
+                        <p><strong>🎨 色泽评分：</strong><span id="aiColor">9.0</span>/10</p>
+                        <p><strong>✨ 优点：</strong><span id="aiPros">色泽金黄，摆盘整齐，粉干分明不粘连</span></p>
+                        <p><strong>💡 建议：</strong><span id="aiCons">可以适当增加配菜的颜色搭配，让整体更有食欲</span></p>
+                    </div>
+                    <div class="ai-points-earned">
+                        <span>🎁 获得积分：</span>
+                        <span class="points-num" id="uploadPoints">+5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 用户评价 -->
+            <div class="reviews-section">
+                <h4>⭐ 用户体验评价</h4>
+                
+                <!-- 积分规则说明 -->
+                <div class="points-rules-box">
+                    <div class="points-rules-header">
+                        <span class="points-icon">🎁</span>
+                        <span>评价获取积分规则</span>
+                    </div>
+                    <div class="points-rules-content">
+                        <div class="points-rule-item">
+                            <span class="rule-label">⭐ 评分积分：</span>
+                            <span class="rule-detail">1-2星 <em>0分</em> | 3星 <em>+2分</em> | 4星 <em>+3分</em> | 5星 <em>+5分</em></span>
+                        </div>
+                        <div class="points-rule-item">
+                            <span class="rule-label">📷 上传积分：</span>
+                            <span class="rule-detail">图片 <em>+2分/张</em> | 视频 <em>+6分/条</em></span>
+                        </div>
+                        <div class="points-rule-note">
+                            💡 上传粉干作品或红色历史文化内容 @红小藤，平台审核后可获额外积分奖励！
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-form">
+                    <div class="star-rating">
+                        <span>评分：</span>
+                        <div class="stars" id="ratingStars">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <span class="star-points-preview" id="starPointsPreview"></span>
+                    </div>
+                    <textarea placeholder="分享你的烹饪体验... @红小藤 参与互动获取更多积分" class="review-input" id="reviewInput"></textarea>
+                    <div class="review-upload">
+                        <input type="file" id="reviewMedia" accept="image/*,video/*" multiple hidden>
+                        <button class="btn-upload-media" onclick="document.getElementById('reviewMedia').click()">📎 上传图片/视频</button>
+                        <span class="upload-points-preview" id="mediaPointsPreview"></span>
+                    </div>
+                    <div class="review-media-preview" id="reviewMediaPreview"></div>
+                    <button class="btn-submit-review" onclick="submitReview()">提交评价</button>
+                </div>
+                
+                <div class="reviews-list" id="reviewsList">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer">美食爱好者</span>
+                            <span class="review-stars">★★★★★</span>
+                            <span class="review-date">2026-02-10</span>
+                        </div>
+                        <p class="review-text">按照教程做出来很好吃！粉干软硬适中，汤汁浓郁。</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="reviewer">厨房新手</span>
+                            <span class="review-stars">★★★★☆</span>
+                            <span class="review-date">2026-02-08</span>
+                        </div>
+                        <p class="review-text">第一次尝试就成功了，很详细的教程，非常推荐！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 农户直播互动 -->
+    <section id="live" class="culture-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>直播互动</h2>
+            </div>
+            <div class="book-slider">
+                <div class="book-slides-wrapper">
+                    <div class="book-slide" data-index="0">
+                        <video src="video/1eec5aca237a5b8939c56c98b8b733f5_raw.mp4" muted autoplay loop playsinline></video>
+                    </div>
+                    <div class="book-slide" data-index="1">
+                        <video src="video/25ba1d3179deb8d8635eed9c7598cc72_raw.mp4" muted autoplay loop playsinline></video>
+                    </div>
+                    <div class="book-slide" data-index="2">
+                        <video src="video/27eaf3edf9eddf599e4b8a026e055f4f_raw.mp4" muted autoplay loop playsinline></video>
+                    </div>
+                    <div class="book-slide" data-index="3">
+                        <video src="video/3a3d3422b87659807cc5ab7c65e37f33_raw.mp4" muted autoplay loop playsinline></video>
+                    </div>
+                    <div class="book-slide" data-index="4">
+                        <video src="video/4cfd149520f7ba8349525ef8bb4060b2_raw.mp4" muted autoplay loop playsinline></video>
+                    </div>
+                </div>
+                <button class="book-nav book-prev">❮</button>
+                <button class="book-nav book-next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 积分奖励 -->
+    <section id="points" class="points-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>积分奖励</h2>
+            </div>
+            
+            <!-- 我的积分卡片 -->
+            <div class="points-card">
+                <div class="points-card-header">
+                    <span class="points-card-title">🎁 我的积分</span>
+                </div>
+                <div class="points-card-body">
+                    <div class="points-total">
+                        <span class="points-number" id="myTotalPoints">0</span>
+                        <span class="points-label-pts">Pts</span>
+                    </div>
+                    <div class="points-rmb-value">
+                        ≈ <span id="pointsRmbValue">0.00</span> RMB
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 积分获取规则 -->
+            <div class="points-rules-section">
+                <h3>📋 积分获取规则</h3>
+                <div class="points-rules-grid">
+                    <div class="rule-card">
+                        <div class="rule-icon">⭐</div>
+                        <div class="rule-content">
+                            <h4>五星评分积分</h4>
+                            <ul class="rule-list">
+                                <li><span class="star-badge">1-2星</span> <em>0分</em></li>
+                                <li><span class="star-badge">3星</span> <em>+2分</em></li>
+                                <li><span class="star-badge">4星</span> <em>+3分</em></li>
+                                <li><span class="star-badge">5星</span> <em>+5分</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-icon">📷</div>
+                        <div class="rule-content">
+                            <h4>上传作品积分</h4>
+                            <ul class="rule-list">
+                                <li><span class="media-badge">📸 图片</span> <em>+2分/张</em></li>
+                                <li><span class="media-badge">🎬 视频</span> <em>+6分/条</em> 基础分</li>
+                                <li><span class="bonus-badge">✨ 优质视频</span> <em>额外奖励</em></li>
+                            </ul>
+                            <p class="rule-note">优质视频上不封顶，需后台审核标注</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="points-tips">
+                    <span class="tip-icon">💡</span>
+                    <span>系统自动累计总积分，上传粉干作品或红色历史文化内容 @红小藤，审核后可获额外积分！</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 礼品兑换区 -->
+    <section id="shop" class="gift-exchange-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>礼品兑换区</h2>
+                <p class="exchange-rate">换算公式：<strong>1 RMB = 80 Pts</strong></p>
+            </div>
+            
+            <!-- 礼品网格 -->
+            <div class="gift-grid">
+                <div class="gift-item" onclick="openExchangeModal('gift1')">
+                    <div class="gift-image">
+                        <img src="商品/商品/伴手礼套餐/套餐一105R.jpg" alt="伴手礼套餐一">
+                    </div>
+                    <div class="gift-info">
+                        <h4>伴手礼套餐一</h4>
+                        <div class="gift-points">8400 <span>Pts</span></div>
+                        <div class="gift-rmb">(105 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('gift2')">
+                    <div class="gift-image">
+                        <img src="商品/商品/伴手礼套餐/套餐二200R.jpg" alt="伴手礼套餐二">
+                    </div>
+                    <div class="gift-info">
+                        <h4>伴手礼套餐二</h4>
+                        <div class="gift-points">16000 <span>Pts</span></div>
+                        <div class="gift-rmb">(200 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('gift3')">
+                    <div class="gift-image">
+                        <img src="商品/商品/伴手礼套餐/套餐五280R.jpg" alt="伴手礼套餐五">
+                    </div>
+                    <div class="gift-info">
+                        <h4>伴手礼套餐五</h4>
+                        <div class="gift-points">22400 <span>Pts</span></div>
+                        <div class="gift-rmb">(280 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('gift4')">
+                    <div class="gift-image">
+                        <img src="商品/商品/伴手礼套餐/套餐六330R.jpg" alt="伴手礼套餐六">
+                    </div>
+                    <div class="gift-info">
+                        <h4>伴手礼套餐六</h4>
+                        <div class="gift-points">26400 <span>Pts</span></div>
+                        <div class="gift-rmb">(330 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('gift5')">
+                    <div class="gift-image">
+                        <img src="商品/商品/伴手礼套餐/套餐三530R.jpg" alt="伴手礼套餐三">
+                    </div>
+                    <div class="gift-info">
+                        <h4>伴手礼套餐三</h4>
+                        <div class="gift-points">42400 <span>Pts</span></div>
+                        <div class="gift-rmb">(530 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('gift6')">
+                    <div class="gift-image">
+                        <img src="商品/商品/伴手礼套餐/套餐四1010R.jpg" alt="伴手礼套餐四">
+                    </div>
+                    <div class="gift-info">
+                        <h4>伴手礼套餐四</h4>
+                        <div class="gift-points">80800 <span>Pts</span></div>
+                        <div class="gift-rmb">(1010 RMB)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 衍生品礼品 -->
+            <div class="gift-category-title">
+                <h3>🧸 品牌衍生品</h3>
+            </div>
+            <div class="gift-grid">
+                <div class="gift-item" onclick="openExchangeModal('plush1')">
+                    <div class="gift-image">
+                        <img src="商品/商品/衍生品/红小藤/毛绒玩偶/毛绒小藤100R每个.jpg" alt="红小藤毛绒玩偶" onerror="this.src='photo/placeholder.jpg'">
+                    </div>
+                    <div class="gift-info">
+                        <h4>红小藤毛绒玩偶</h4>
+                        <div class="gift-points">8000 <span>Pts</span></div>
+                        <div class="gift-rmb">(100 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('charm1')">
+                    <div class="gift-image">
+                        <img src="商品/商品/衍生品/红小藤/挂件/站立毛绒立体挂件(80R).png" alt="红小藤立体挂件" onerror="this.src='photo/placeholder.jpg'">
+                    </div>
+                    <div class="gift-info">
+                        <h4>红小藤立体挂件</h4>
+                        <div class="gift-points">6400 <span>Pts</span></div>
+                        <div class="gift-rmb">(80 RMB)</div>
+                    </div>
+                </div>
+                <div class="gift-item" onclick="openExchangeModal('postcard1')">
+                    <div class="gift-image">
+                        <img src="商品/商品/衍生品/品牌明信片/醒狮明信片15R.jpg" alt="品牌明信片" onerror="this.src='photo/placeholder.jpg'">
+                    </div>
+                    <div class="gift-info">
+                        <h4>品牌明信片套装</h4>
+                        <div class="gift-points">1200 <span>Pts</span></div>
+                        <div class="gift-rmb">(15 RMB)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 复购入口 -->
+    <section id="repurchase" class="repurchase-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>复购入口</h2>
+            </div>
+            
+            <div class="repurchase-card">
+                <div class="xianyu-logo">
+                    <img src="photo/咸鱼.jpg" alt="闲鱼" class="xianyu-avatar">
+                    <div class="xianyu-text">
+                        <h3>温州瑞安伴手礼</h3>
+                        <p>官方授权店铺</p>
+                    </div>
+                </div>
+                
+                <div class="repurchase-info">
+                    <p class="shop-desc">🌾 高楼粉干正品直销，非遗工艺传承</p>
+                    <p class="shop-desc">🚚 产地直发，新鲜到家</p>
+                    <p class="shop-desc">👍 品质保证，放心购买</p>
+                </div>
+                
+                <a href="https://m.tb.cn/h.7C5Bvr6?tk=KnMwUMhVZrM" target="_blank" rel="noopener noreferrer" class="btn-xianyu">
+                    <span class="btn-icon">🛒</span>
+                    <span class="btn-text">点击前往闲鱼购买</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                
+                <div class="shop-tips">
+                    <p>💡 复制口令后打开闲鱼 App 也可直达店铺</p>
+                    <div class="copy-code" onclick="copyXianyuCode()">
+                        <span class="code-text">KnMwUMhVZrM HU293</span>
+                        <button class="btn-copy">📋 复制</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 礼品兑换确认弹窗 -->
+    <div class="exchange-modal" id="exchange-modal">
+        <div class="exchange-modal-content">
+            <div class="exchange-modal-header">
+                <h3>🎁 兑换确认</h3>
+                <button class="exchange-close" onclick="closeExchangeModal()">×</button>
+            </div>
+            <div class="exchange-modal-body">
+                <div class="exchange-gift-preview">
+                    <img id="exchangeGiftImg" src="" alt="礼品图片">
+                </div>
+                <div class="exchange-gift-info">
+                    <h4 id="exchangeGiftName">礼品名称</h4>
+                    <div class="exchange-points-needed">
+                        <span>所需积分：</span>
+                        <strong id="exchangePointsNeeded">0 Pts</strong>
+                    </div>
+                    <div class="exchange-rmb-value">
+                        <span>等值人民币：</span>
+                        <strong id="exchangeRmbValue">¥0.00</strong>
+                    </div>
+                </div>
+                <div class="exchange-balance">
+                    <span>当前积分余额：</span>
+                    <strong id="exchangeCurrentPoints">0 Pts</strong>
+                </div>
+                <div class="exchange-result" id="exchangeResult"></div>
+            </div>
+            <div class="exchange-modal-footer">
+                <button class="btn-cancel-exchange" onclick="closeExchangeModal()">取消</button>
+                <button class="btn-confirm-exchange" id="btnConfirmExchange" onclick="confirmExchange()">确认兑换</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 知识问答弹窗 -->
+    <div id="quiz-modal" class="quiz-modal">
+        <!-- 难度选择页 -->
+        <div class="quiz-difficulty-page" id="quiz-difficulty-page">
+            <div class="quiz-modal-header">
+                <h2>🎯 知识问答挑战</h2>
+                <button class="quiz-close-btn" onclick="closeQuizModal()">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="quiz-difficulty-content">
+                <p class="quiz-intro">选择难度等级，开启知识挑战之旅</p>
+                <div class="difficulty-cards">
+                    <div class="difficulty-card easy" onclick="startQuiz('easy')">
+                        <div class="diff-icon">✦</div>
+                        <div class="difficulty-card-info">
+                            <h3>简单模式</h3>
+                            <p>基础入门 · 每题2分</p>
+                        </div>
+                        <span class="diff-tag">📚 170题</span>
+                        <span class="diff-arrow">→</span>
+                    </div>
+                    <div class="difficulty-card medium" onclick="startQuiz('medium')">
+                        <div class="diff-icon">★</div>
+                        <div class="difficulty-card-info">
+                            <h3>中等模式</h3>
+                            <p>进阶挑战 · 每题4分</p>
+                        </div>
+                        <span class="diff-tag">🎯 150题</span>
+                        <span class="diff-arrow">→</span>
+                    </div>
+                    <div class="difficulty-card hard" onclick="startQuiz('hard')">
+                        <div class="diff-icon">♦</div>
+                        <div class="difficulty-card-info">
+                            <h3>困难模式</h3>
+                            <p>高阶竞技 · 每题6分</p>
+                        </div>
+                        <span class="diff-tag">🔥 150题</span>
+                        <span class="diff-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 答题页 -->
+        <div class="quiz-game-page" id="quiz-game-page" style="display:none;">
+            <div class="quiz-game-header">
+                <button class="quiz-exit-btn" onclick="exitQuiz()">退出</button>
+                <div class="quiz-score-display">
+                    <span class="score-label">本次积分</span>
+                    <span class="score-value" id="current-score">0</span>
+                </div>
+            </div>
+            <div class="quiz-question-area">
+                <div class="question-progress">
+                    <span id="question-number">第 1 题</span>
+                    <span class="difficulty-badge" id="difficulty-badge">简单</span>
+                </div>
+                <div class="question-text" id="question-text"></div>
+                <div class="options-list" id="options-list"></div>
+                <div class="answer-feedback" id="answer-feedback"></div>
+                <button class="next-question-btn" id="next-btn" onclick="nextQuestion()" style="display:none;">下一题 →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 退出确认弹窗 -->
+    <div id="exit-confirm-modal" class="exit-confirm-modal">
+        <div class="exit-confirm-content">
+            <h3>确认退出？</h3>
+            <p>您本次获得 <span id="exit-score" class="highlight-score">0</span> 积分</p>
+            <p class="exit-hint">积分已实时累加到您的账户</p>
+            <div class="exit-btns">
+                <button class="btn-cancel" onclick="cancelExit()">继续答题</button>
+                <button class="btn-confirm" onclick="confirmExit()">确认退出</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 红小藤浮动助手 -->
+    <div class="xiaoteng-assistant">
+        <div class="xiaoteng-avatar" onclick="toggleXiaotengMenu()">
+            <video src="video/xiao1.mp4" muted autoplay loop playsinline></video>
+            <div class="xiaoteng-name">红小藤</div>
+        </div>
+        
+        <!-- 一级菜单 -->
+        <div class="xiaoteng-menu" id="xiaoteng-menu">
+            <div class="menu-item" onclick="showAnswerMenu()">
+                <span class="menu-icon">💬</span>
+                <span>咨询服务</span>
+            </div>
+            <div class="menu-item" onclick="openCommunityModal()">
+                <span class="menu-icon">👥</span>
+                <span>社群互动</span>
+            </div>
+        </div>
+        
+        <!-- 咨询服务二级菜单 -->
+        <div class="xiaoteng-submenu" id="answer-submenu">
+            <div class="submenu-header" onclick="backToMainMenu()">
+                <span>← 返回</span>
+            </div>
+            <div class="menu-item" onclick="openAIChat()">
+                <span class="menu-icon">🤖</span>
+                <span>在线咨询</span>
+            </div>
+            <div class="menu-item" onclick="openPhoneConsult()">
+                <span class="menu-icon">📞</span>
+                <span>电话咨询</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 社群互动模态框 -->
+    <div class="community-modal" id="community-modal">
+        <div class="community-modal-content">
+            <div class="community-header">
+                <h2>社群互动 · 红小藤</h2>
+                <button class="community-close" onclick="closeCommunityModal()">×</button>
+            </div>
+            
+            <!-- 上传入口 -->
+            <div class="community-upload-section">
+                <div class="upload-tips">
+                    <span class="upload-icon">📸</span>
+                    <span class="upload-text">分享你的粉干作品，获取积分奖励！</span>
+                </div>
+                <div class="upload-buttons">
+                    <button class="btn-upload-image" onclick="uploadCommunityImage()">
+                        <span class="btn-icon">🖼️</span>
+                        <span class="btn-text">上传图片</span>
+                        <span class="btn-points">+2积分</span>
+                    </button>
+                    <button class="btn-upload-video" onclick="uploadCommunityVideo()">
+                        <span class="btn-icon">🎬</span>
+                        <span class="btn-text">上传视频</span>
+                        <span class="btn-points">+6积分</span>
+                    </button>
+                </div>
+                <input type="file" id="communityImageUpload" accept="image/*" style="display:none;" onchange="handleCommunityImageUpload(event)">
+                <input type="file" id="communityVideoUpload" accept="video/*" style="display:none;" onchange="handleCommunityVideoUpload(event)">
+            </div>
+            
+            <!-- 标签切换 -->
+            <div class="community-tabs">
+                <button class="community-tab active" data-tab="user-works" onclick="switchCommunityTab('user-works')">
+                    <span>🎨 用户粉干作品</span>
+                    <span class="tab-count">126</span>
+                </button>
+                <button class="community-tab" data-tab="history-works" onclick="switchCommunityTab('history-works')">
+                    <span>🏛️ 红色历史作品</span>
+                    <span class="tab-count">48</span>
+                </button>
+            </div>
+            
+            <!-- 用户粉干作品 -->
+            <div class="community-works-grid" id="user-works" style="display: grid;">
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="photo/粉干/金汤/20250214_102758.jpg" alt="用户作品">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">美食爱好者</div>
+                        <div class="work-stats">
+                            <span>👍 128</span>
+                            <span>💬 23</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="photo/粉干/经典/20250214_102915.jpg" alt="用户作品">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">温州老乡</div>
+                        <div class="work-stats">
+                            <span>👍 95</span>
+                            <span>💬 18</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media video-preview">
+                        <img src="photo/粉干/营养/20250214_103104.jpg" alt="用户作品">
+                        <div class="video-play-icon">▶</div>
+                        <div class="work-type-badge">🎬</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">厨房新手</div>
+                        <div class="work-stats">
+                            <span>👍 156</span>
+                            <span>💬 34</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="photo/DIY烹饪图片/20250214_102354.jpg" alt="用户作品">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">粉干达人</div>
+                        <div class="work-stats">
+                            <span>👍 203</span>
+                            <span>💬 45</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="photo/DIY烹饪图片/20250214_102520.jpg" alt="用户作品">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">美味时光</div>
+                        <div class="work-stats">
+                            <span>👍 87</span>
+                            <span>💬 12</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="photo/粉干/金汤/20250214_102827.jpg" alt="用户作品">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">家常美食</div>
+                        <div class="work-stats">
+                            <span>👍 164</span>
+                            <span>💬 28</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 红色历史作品 -->
+            <div class="community-works-grid" id="history-works" style="display: none;">
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="直播图片/直播图片/未标题-1.jpg" alt="红色历史">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">@红小藤</div>
+                        <div class="work-stats">
+                            <span>👍 523</span>
+                            <span>💬 89</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="直播图片/直播图片/屏幕截图 2025-02-14 103527.png" alt="红色历史">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">@红小藤</div>
+                        <div class="work-stats">
+                            <span>👍 412</span>
+                            <span>💬 67</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media video-preview">
+                        <img src="直播图片/直播图片/屏幕截图 2025-02-14 103602.png" alt="红色历史">
+                        <div class="video-play-icon">▶</div>
+                        <div class="work-type-badge">🎬</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">@红小藤</div>
+                        <div class="work-stats">
+                            <span>👍 687</span>
+                            <span>💬 134</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="直播图片/直播图片/屏幕截图 2025-02-14 103624.png" alt="红色历史">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">@红小藤</div>
+                        <div class="work-stats">
+                            <span>👍 356</span>
+                            <span>💬 52</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="直播图片/直播图片/屏幕截图 2025-02-14 103653.png" alt="红色历史">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">@红小藤</div>
+                        <div class="work-stats">
+                            <span>👍 445</span>
+                            <span>💬 78</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-item">
+                    <div class="work-media">
+                        <img src="直播图片/直播图片/屏幕截图 2025-02-14 103725.png" alt="红色历史">
+                        <div class="work-type-badge">📷</div>
+                    </div>
+                    <div class="work-info">
+                        <div class="work-author">@红小藤</div>
+                        <div class="work-stats">
+                            <span>👍 298</span>
+                            <span>💬 41</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI客服弹窗 -->
+    <div class="ai-chat-modal" id="ai-chat-modal">
+        <div class="ai-chat-content">
+            <div class="ai-chat-header">
+                <button class="ai-chat-back" onclick="closeAIChat()">←</button>
+                <span>🤖 红小藤 AI客服</span>
+                <button class="ai-chat-close" onclick="closeAIChat()">×</button>
+            </div>
+            <div class="ai-chat-body">
+                <div class="chat-message bot">
+                    <div class="chat-avatar">🤖</div>
+                    <div class="chat-bubble">您好！我是红小藤AI客服，请问有什么可以帮您的？<br><br>🕒 <strong>在线客服工作时间：9:00-21:00</strong></div>
+                </div>
+            </div>
+            <div class="ai-chat-input">
+                <input type="text" placeholder="输入您的问题..." id="ai-chat-input">
+                <button onclick="sendAIMessage()">发送</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 电话咨询弹窗 -->
+    <div class="phone-modal" id="phone-modal">
+        <div class="phone-modal-content">
+            <div class="phone-header">📞 电话咨询</div>
+            <div class="phone-number">400-888-1978</div>
+            <div class="phone-time">服务时间：周一至周五 9:00-18:00</div>
+            <div class="phone-btns">
+                <button class="phone-cancel" onclick="closePhoneModal()">取消</button>
+                <a href="tel:4008881978" class="phone-call">立即拨打</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/qrcode-handler.js"></script>
+    <script src="js/quiz-data.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/xiaoteng.js"></script>
+</body>
+</html>
