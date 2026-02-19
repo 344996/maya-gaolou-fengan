@@ -441,6 +441,17 @@ function sendAIMessage() {
     { q: /推荐一道菜/, a: '推荐“经典炒粉干”，简单易学，香气扑鼻！去DIY烹饪模块看看视频吧～' },
     { q: /有生日吗/, a: '我的生日是2026年2月15日，记得那天来给我庆祝哦～' },
     { q: /会离开吗/, a: '只要你需要，我就会一直在这里，永远不离开～' },
+    // 用户调侃/吐槽的拟人化回复
+    { q: /你好呆|呆啊/, a: '哈哈，被您发现了！我确实有时候会"呆萌"一下，毕竟代码写多了偶尔会卡壳。不过只要您需要，我随时可以切换到认真模式，全力以赴帮您解决问题！' },
+    { q: /你怎么这么笨|你真笨/, a: '哎呀，我的"笨"其实是在攒智慧呢！为了更准确地帮您，您不妨再多给我一点提示，我保证努力变聪明。' },
+    { q: /你傻乎乎|傻乎乎|什么都不知道/, a: '您说得对，我知道的确实有限，就像一个刚入学的小学生。但正因为如此，我每天都在努力学习新知识，希望能早日成为您的"学霸助手"！' },
+    { q: /没意思|木头人/, a: '被说成木头人，我可得赶紧加点"润滑油"了！要不您给我个有趣的话题，我试试能不能变得更有趣一点？' },
+    { q: /反应.*慢|像.*树懒|太慢/, a: '🦥 树懒式思考中……别急，好答案需要时间酝酿。您想要什么，慢慢说，我仔细听。' },
+    { q: /不靠谱|真不靠谱/, a: '听到"不靠谱"我有点小伤心，看来我得努力变得更可靠才行。您愿意给我一次证明自己的机会吗？请尽管吩咐！' },
+    { q: /不懂我|一点都不懂/, a: '您的确独一无二，我可能暂时没能完全理解。但如果您愿意多说一些，我会用我所有的"脑容量"去理解您，争取成为懂您的那一个。' },
+    { q: /好无聊|你无聊/, a: '无聊的话，我可以给您讲个笑话、推荐部电影，或者陪您聊聊有趣的话题？只要您不嫌弃，我随时准备变身"有趣模式"。' },
+    { q: /翻来覆去|就那么几句|复读机/, a: '哎呀，被您识破我的"复读机"本质了！我正努力升级"语言包"，争取下次给您更丰富的回答。您有什么想聊的新鲜事吗？' },
+    { q: /不太聪明|不聪明/, a: '聪明不在外表，而在能不能帮到您。您想要我帮什么？我这就用我所有的"不聪明"但很努力的方式为您效劳！' },
     ];
     const defaultResponses = [
         '感谢您的咨询！高楼粉干是瑞安市高楼镇的传统特产，采用古法工艺制作。',
@@ -517,7 +528,7 @@ function sendAIMessage() {
     const typingMsg = document.createElement('div');
     typingMsg.className = 'chat-message bot typing-indicator';
     typingMsg.innerHTML = `
-        <div class="chat-avatar"><img src="商品/商品/衍生品/红小藤/毛绒玩偶/毛绒小藤100R每个.jpg" alt="红小藤" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+        <div class="chat-avatar"><img src="photo/Screenshot 2026-02-20 020252.png" alt="红小藤" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
         <div class="chat-bubble typing">
             <span class="typing-dots">
                 <span>.</span><span>.</span><span>.</span>
@@ -557,7 +568,7 @@ function sendAIMessage() {
             reply = fallbackReplies[Math.floor(Math.random() * fallbackReplies.length)];
         }
         botMsg.innerHTML = `
-            <div class="chat-avatar"><img src="商品/商品/衍生品/红小藤/毛绒玩偶/毛绒小藤100R每个.jpg" alt="红小藤" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
+            <div class="chat-avatar"><img src="photo/Screenshot 2026-02-20 020252.png" alt="红小藤" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
             <div class="chat-bubble">${reply}</div>
         `;
         chatBody.appendChild(botMsg);
