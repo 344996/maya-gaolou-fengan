@@ -447,15 +447,69 @@ function sendAIMessage() {
         '关于积分问题：您可以通过评价获得积分，5星评价可获得5积分，上传视频可获得6积分哦！',
         '关于配送：我们支持全国包邮，一般3-5天送达。',
         '关于保质期：高楼粉干保质期为24个月，请存放于阴凉干燥处。',
-        '如需更多帮助，您可以拨打客服热线 400-888-1978，工作时间 9:00-21:00。'
+        '如需更多帮助，您可以拨打客服热线 12386，工作时间 9:00-21:00。'
     ];
+    
+    // 负面词汇识别库
+    const negativePatterns = [
+        { words: /垃圾|破|烂|差劲|糟糕|恶心|难吃|坑|骗子|假的|假货|骗人/, type: 'insult' },
+        { words: /傻[比逼叉]|蠢|笨|白痴|智障|脑[残子]|二[货逼]|弱智|呆子/, type: 'insult' },
+        { words: /去死|滚|闭嘴|讨厌|恶心|厌恶|滚蛋|废物|没用/, type: 'insult' },
+        { words: /不好|不行|失望|后悔|不满|投诉/, type: 'negative' }
+    ];
+    
+    // 幽默回应库
+    const negativeResponses = {
+        insult: [
+            '原来我在你心里这么重要啊，连聊天都离不开我！😊',
+            '谢谢你的关注，不过下次建议当面说，我可以帮你补充细节～',
+            '看来我最近低调得不够明显，居然还有人专门讨论我。',
+            '你这么说，是遇到什么事了吗？我们可以直接沟通。',
+            '如果你对我有意见，不如我们私下聊聊？背后讨论容易误会。',
+            '我有点好奇，你告诉我这个，是希望我改进什么吗？',
+            '每个人都有自己的看法，很正常。',
+            '谢谢提醒，不过我不太在意别人怎么评价我。',
+            '如果你觉得这样说让你开心，那就继续吧。',
+            '你居然在背后夸我？这我可不好意思听～',
+            '看来我的八卦已经成了你的精神支柱，辛苦你了。',
+            '如果你实在闲得慌，不如帮我点个外卖？',
+            '我听到了一些关于我的讨论，如果你有问题，我们可以直接说清楚。',
+            '可能我们之间有误会，要不要找个时间聊聊？',
+            '我不希望背后的话影响我们的关系，所以想听听你的真实想法。'
+        ],
+        negative: [
+            '听起来您好像遇到了一些不愉快的体验，能具体和我说说吗？我会尽力帮您解决～',
+            '如果有什么不满意的地方，请告诉我详情，我们一定改进！',
+            '您的反馈对我们很重要，可以说说具体是哪方面让您失望吗？',
+            '抱歉让您有了不好的体验，能否详细说明一下，我们会认真对待！'
+        ]
+    };
+
+    // 检测负面词汇
+    let isNegative = false;
+    let negativeType = null;
+    for (const pattern of negativePatterns) {
+        if (pattern.words.test(message)) {
+            isNegative = true;
+            negativeType = pattern.type;
+            break;
+        }
+    }
 
     // 匹配知识库
     let matched = null;
-    for (const pair of aiQAPairs) {
-        if (pair.q.test(message)) {
-            matched = pair.a;
-            break;
+    
+    // 如果检测到负面词汇，优先使用负面回应
+    if (isNegative && negativeType) {
+        const responses = negativeResponses[negativeType];
+        matched = responses[Math.floor(Math.random() * responses.length)];
+    } else {
+        // 正常匹配知识库
+        for (const pair of aiQAPairs) {
+            if (pair.q.test(message)) {
+                matched = pair.a;
+                break;
+            }
         }
     }
 
@@ -463,7 +517,7 @@ function sendAIMessage() {
     const typingMsg = document.createElement('div');
     typingMsg.className = 'chat-message bot typing-indicator';
     typingMsg.innerHTML = `
-        <div class="chat-avatar">🤖</div>
+        <div class="chat-avatar"><img src="商品/商品/衍生品/红小藤/毛绒玩偶/毛绒小藤100R每个.jpg" alt="红小藤" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
         <div class="chat-bubble typing">
             <span class="typing-dots">
                 <span>.</span><span>.</span><span>.</span>
@@ -503,7 +557,7 @@ function sendAIMessage() {
             reply = fallbackReplies[Math.floor(Math.random() * fallbackReplies.length)];
         }
         botMsg.innerHTML = `
-            <div class="chat-avatar">🤖</div>
+            <div class="chat-avatar"><img src="商品/商品/衍生品/红小藤/毛绒玩偶/毛绒小藤100R每个.jpg" alt="红小藤" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
             <div class="chat-bubble">${reply}</div>
         `;
         chatBody.appendChild(botMsg);

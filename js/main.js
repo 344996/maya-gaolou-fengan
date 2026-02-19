@@ -1455,6 +1455,13 @@ function submitReview() {
         return;
     }
     
+    // 检查是否已经评分过
+    const hasReviewed = localStorage.getItem('hasReviewed');
+    if (hasReviewed === 'true') {
+        alert('您已经提交过评价了，每位用户只能评价一次哦！');
+        return;
+    }
+    
     // 计算积分
     const STAR_POINTS = { 1: 0, 2: 0, 3: 2, 4: 3, 5: 5 };
     let totalPoints = STAR_POINTS[currentRating] || 0;
@@ -1487,6 +1494,9 @@ function submitReview() {
         triggerPointsReward(totalPoints, '评价提交');
     }
     
+    // 标记用户已评分
+    localStorage.setItem('hasReviewed', 'true');
+    
     alert(`评价提交成功！获得 +${totalPoints} 积分`);
     
     // 重置表单
@@ -1515,7 +1525,31 @@ const giftData = {
     gift6: { name: '伴手礼套餐四', points: 80800, rmb: 1010, img: '商品/商品/伴手礼套餐/套餐四1010R.jpg' },
     plush1: { name: '红小藤毛绒玩偶', points: 8000, rmb: 100, img: '商品/商品/衍生品/红小藤/毛绒玩偶/毛绒小藤100R每个.jpg' },
     charm1: { name: '红小藤立体挂件', points: 6400, rmb: 80, img: '商品/商品/衍生品/红小藤/挂件/站立毛绒立体挂件(80R).png' },
-    postcard1: { name: '品牌明信片套装', points: 1200, rmb: 15, img: '商品/商品/衍生品/品牌明信片/醒狮明信片15R.jpg' }
+    postcard1: { name: '品牌明信片套装', points: 1200, rmb: 15, img: '商品/商品/衍生品/品牌明信片/醒狮明信片15R.jpg' },
+    
+    // 豆豆系列
+    bean1: { name: '毛绒豆豆玩偶', points: 6400, rmb: 80, img: '商品/商品/衍生品/豆豆/毛绒玩偶/毛绒豆豆80R每个.jpg' },
+    bean2: { name: '豆娃帆布包', points: 5120, rmb: 64, img: '商品/商品/衍生品/豆豆/豆娃/帆布包(64R).jpg' },
+    bean3: { name: '豆娃手机壳', points: 2400, rmb: 30, img: '商品/商品/衍生品/豆豆/豆娃/手机壳(30R).jpg' },
+    bean4: { name: '豆娃手账本', points: 2800, rmb: 35, img: '商品/商品/衍生品/豆豆/豆娃/手账本(35R).jpg' },
+    
+    // 红小藤挂件系列
+    xiaoteng1: { name: '红小藤托腮挂件', points: 1200, rmb: 15, img: '商品/商品/衍生品/红小藤/挂件/托腮平面挂件(15R).jpg' },
+    xiaoteng2: { name: '红小藤站立挂件', points: 1200, rmb: 15, img: '商品/商品/衍生品/红小藤/挂件/站立平面挂件(15R).jpg' },
+    xiaoteng3: { name: '红小藤挥旗挂件', points: 2000, rmb: 25, img: '商品/商品/衍生品/红小藤/挂件/双手挥旗平面挂件(25R).jpg' },
+    
+    // 品牌明信片系列
+    postcard2: { name: '年画娃娃明信片', points: 1200, rmb: 15, img: '商品/商品/衍生品/品牌明信片/年画娃娃明信片15R.jpg' },
+    postcard3: { name: '春梅少年明信片', points: 800, rmb: 10, img: '商品/商品/衍生品/品牌明信片/春梅少年明信片单价10R.jpg' },
+    
+    // Logo系列
+    logo1: { name: 'Logo套餐一', points: 6400, rmb: 80, img: '商品/商品/衍生品/logo/套餐1(80R).jpg' },
+    logo2: { name: 'Logo套餐二', points: 14400, rmb: 180, img: '商品/商品/衍生品/logo/套餐2(180R).jpg' },
+    logo3: { name: 'Logo挂件', points: 1600, rmb: 20, img: '商品/商品/衍生品/logo/挂件20R(1600Pts).jpg' },
+    logo4: { name: 'Logo明信片', points: 640, rmb: 8, img: '商品/商品/衍生品/logo/明信片8R(640Pts).jpg' },
+    
+    // 粉干产品
+    fengan1: { name: '绛藤间高楼粉干', points: 2400, rmb: 30, img: '商品/商品/绛藤间高楼粉干30R每斤.jpg' }
 };
 
 let currentExchangeGift = null;
@@ -1784,5 +1818,32 @@ function showCopySuccess() {
         setTimeout(() => toast.remove(), 300);
     }, 2000);
 }
+
+// ========================================
+// 返回顶部功能
+// ========================================
+
+// 返回顶部函数
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// 监听滚动事件，显示/隐藏返回顶部按钮
+window.addEventListener('scroll', function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    }
+});
+
+// 导出函数到全局
+window.scrollToTop = scrollToTop;
 
 window.copyXianyuCode = copyXianyuCode;

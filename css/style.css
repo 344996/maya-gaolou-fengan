@@ -1520,6 +1520,60 @@ img {
     letter-spacing: 4px;
 }
 
+.company-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #FFF9E6, #FDF5E0);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.company-intro-text p {
+    color: var(--primary-dark);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.company-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+.process-intro-header {
+    text-align: center;
+    padding: 50px 0 30px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.process-intro-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.process-intro-header h3 {
+    color: var(--primary-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.process-intro-header p {
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
 /* ========================================
    视频展示区域 - 竹帘风格（左右分栏）
    ======================================== */
@@ -2844,8 +2898,8 @@ img {
 .points-rule-item .rule-detail em {
     font-style: normal;
     font-weight: 600;
-    color: var(--gold);
-    background: var(--primary-dark);
+    color: #8B4513;
+    background: #ffffff;
     padding: 2px 8px;
     border-radius: 10px;
     font-size: 13px;
@@ -4926,8 +4980,8 @@ img {
 .rule-list li em {
     font-style: normal;
     font-weight: 700;
-    color: var(--accent-gold);
-    background: var(--primary-dark);
+    color: #8B4513;
+    background: #ffffff;
     padding: 3px 10px;
     border-radius: 12px;
     font-size: 13px;
@@ -5545,4 +5599,46 @@ img {
     .code-text {
         font-size: 14px;
     }
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-dark);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: #5d3a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
+}
+
+.back-to-top span {
+    font-weight: bold;
 }
